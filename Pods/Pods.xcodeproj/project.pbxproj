@@ -1,0 +1,936 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		02722D15B86FAA560659710426D6C247 /* Pods-HanziVoiceTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 66675A920C922FCC43D08D8EBFD5A8B0 /* Pods-HanziVoiceTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		092A5C98D4E15287179422AD5A866047 /* SQLite.swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 27B2D491F0A9B062233011B873DC118C /* SQLite.swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0C71EA41279AD4DD0BA375DC54EB961D /* SQLite.swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D30459F9DC30876AF6C299D26C7CE48 /* SQLite.swift-dummy.m */; };
+		0ED8F072B320D7617AC4C8443AD3A42A /* fts3_tokenizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AE2EFBEFDE20C4DDD8B3398D8AE5AE8 /* fts3_tokenizer.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		110E2C4B985D95F273F80947117D4A48 /* SQLite-Bridging.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E070D9E44393CD520D0B1AF87A6736D /* SQLite-Bridging.m */; };
+		1746349A9750EA7A436E770FD6522BDC /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCCE88ECC9D892349AB6CB3160246D9 /* Query.swift */; };
+		17E32F3355BC68962A86F64E1760D132 /* Pods-HanziVoice-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AB03E3CA2F3ED5DE5A036AFF2D70C76 /* Pods-HanziVoice-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1975A8DF6BA0F04157D8E9B2CD70172D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		294C1784B27B59D7BCC43FE78E1E8EEB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		41DFF61D69635EDE80806A6305B56566 /* Value.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE06F129836BA95B0BE2222991D2BD0 /* Value.swift */; };
+		475267E1B75987F81F26B4D807B43BEE /* CustomFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348491EAD9C18B0EEB2E855815254774 /* CustomFunctions.swift */; };
+		47AE89F7EA1E95CC258485C30A20339A /* Statement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96600A78FEC066BF8931D7A58FBF0F16 /* Statement.swift */; };
+		5BDBCA69FDA1AE2BE69EE1408017FABF /* CoreFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FAE93532FD5578A02AF3CC523A3408 /* CoreFunctions.swift */; };
+		61714DE9FFDC9E5ED1B3A0DA5347C93E /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C5D76BD109C46DEC526A712FC4A8BB /* Helpers.swift */; };
+		659197E0E6F29323D52991FFD33E3511 /* Blob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680617B7B3999D016982CD479DADCCB0 /* Blob.swift */; };
+		70052AAC4704A66884F74480AC83E3E8 /* SQLite-Bridging.h in Headers */ = {isa = PBXBuildFile; fileRef = AF7F8DDFC50FE6ACA57F6A16E253F8DC /* SQLite-Bridging.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7755C7010D0BEE52054C3DF9838A55C7 /* Pods-HanziVoiceUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0CE94E4C5FA4BF75BEBF87448819C84A /* Pods-HanziVoiceUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		77AC64E8224AFCB4266C76B37D829421 /* RTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F331ABE5223829EDFFC088184DFA981 /* RTree.swift */; };
+		881395183035B8ECFF6FA1FE08BCD429 /* Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF98B7BBADF63A0AF80D7829FA6F77B9 /* Schema.swift */; };
+		8D0DE97B9766A131815DCD5F3B749DEE /* Pods-HanziVoiceTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 651F6A1AD54EEAECC40FDA3535E2DD27 /* Pods-HanziVoiceTests-dummy.m */; };
+		8FC7463E865D46AD11B0F7A5DCDAD1DC /* Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E667D63233F61B551F3B93AF184020E0 /* Foundation.swift */; };
+		903E29EF2AA8531BE818C6770555AD61 /* Pods-HanziVoiceUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 527BE33E50CD9FFC70378A189D1FE88B /* Pods-HanziVoiceUITests-dummy.m */; };
+		A2B4076254AD1A218548D1244144D5A0 /* FTS5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4C8E0D8DB99B4482E2549FEAE620B8 /* FTS5.swift */; };
+		A4B1838663633BD514C56D0C202C8DFC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		A8177560682EC26F4740A9FD0A65978F /* Pods-HanziVoice-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D475A76C89144B85B1C764686D3739 /* Pods-HanziVoice-dummy.m */; };
+		B4A2335B7F3E83EE37BCA61806FB0E1C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		BA0CA653BA5C8ABB6EE894C2C0AFF429 /* SQLite.h in Headers */ = {isa = PBXBuildFile; fileRef = B88C5FD0C85A5AE4583CC7DB512E6820 /* SQLite.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CDB2149047D280FD9978FD3D4044D5F3 /* FTS4.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A99896DB5D793228657B5F5EC525DA /* FTS4.swift */; };
+		D33C001E9CE4FCB43E5CC9D4A6577BAA /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA86AD441076D928D0621530CD5E745 /* Operators.swift */; };
+		DA6E1D97DA12EA8765BF6677FDCD642A /* Expression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44EE37E8BF436A90A9C40AD27A182DB2 /* Expression.swift */; };
+		ED915DC5901B9491DAEFE243CCFEE41A /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF813C6D3C0824E1BCFDACADE6109F5 /* Connection.swift */; };
+		F021AF78DE179C2072394B5BE52FD071 /* Setter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7CCC1A073BC5540EA969CA71F0C552 /* Setter.swift */; };
+		F030675FD663D9C89E8235C555EA3B2B /* Collation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B7855DE178D22988512E88C68325BE /* Collation.swift */; };
+		F961FF012F2F2C4EBD2FCB89BE1B495C /* AggregateFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E934E5F923C9742E63347D5512C322 /* AggregateFunctions.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3AAFC2A2797449DE2E1578124157407E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5F53E84366C33871CE7340F2A5E538C8;
+			remoteInfo = SQLite.swift;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		007689E1265A9E39442E5A48C56127F6 /* Pods-HanziVoiceTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HanziVoiceTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		0CE94E4C5FA4BF75BEBF87448819C84A /* Pods-HanziVoiceUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HanziVoiceUITests-umbrella.h"; sourceTree = "<group>"; };
+		0D7682EBC69EAB5C65063872DB9F378E /* Pods-HanziVoiceUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-HanziVoiceUITests.modulemap"; sourceTree = "<group>"; };
+		0E070D9E44393CD520D0B1AF87A6736D /* SQLite-Bridging.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "SQLite-Bridging.m"; path = "Sources/SQLiteObjc/SQLite-Bridging.m"; sourceTree = "<group>"; };
+		0F331ABE5223829EDFFC088184DFA981 /* RTree.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RTree.swift; path = Sources/SQLite/Extensions/RTree.swift; sourceTree = "<group>"; };
+		1D7DA9FB08FD2A913967F0D7996B8701 /* SQLite.swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SQLite.swift.modulemap; sourceTree = "<group>"; };
+		1EC3C1E6C3B57B46326B94BAB568B649 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FC07BA4F995DCF0A22B0290D2BD6606 /* Pods-HanziVoiceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HanziVoiceTests.release.xcconfig"; sourceTree = "<group>"; };
+		22DD805114DA2B424271203374E11C1B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23E934E5F923C9742E63347D5512C322 /* AggregateFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AggregateFunctions.swift; path = Sources/SQLite/Typed/AggregateFunctions.swift; sourceTree = "<group>"; };
+		27B2D491F0A9B062233011B873DC118C /* SQLite.swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SQLite.swift-umbrella.h"; sourceTree = "<group>"; };
+		2CF5D038A9D57F189C0EF9E5821E2898 /* Pods-HanziVoice-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HanziVoice-acknowledgements.plist"; sourceTree = "<group>"; };
+		2D30459F9DC30876AF6C299D26C7CE48 /* SQLite.swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SQLite.swift-dummy.m"; sourceTree = "<group>"; };
+		348491EAD9C18B0EEB2E855815254774 /* CustomFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomFunctions.swift; path = Sources/SQLite/Typed/CustomFunctions.swift; sourceTree = "<group>"; };
+		35882B17B11D978090FA3DE2F4E0C112 /* Pods-HanziVoice-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HanziVoice-resources.sh"; sourceTree = "<group>"; };
+		370926C12AB33A08E2FCAEDA24C56EE5 /* Pods-HanziVoice.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-HanziVoice.modulemap"; sourceTree = "<group>"; };
+		3A75380C4EF4FDC87CA9DD0C92D387E8 /* Pods-HanziVoiceTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HanziVoiceTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		3AB03E3CA2F3ED5DE5A036AFF2D70C76 /* Pods-HanziVoice-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HanziVoice-umbrella.h"; sourceTree = "<group>"; };
+		3FCCE88ECC9D892349AB6CB3160246D9 /* Query.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Query.swift; path = Sources/SQLite/Typed/Query.swift; sourceTree = "<group>"; };
+		4039E2BB65E5BAFED07D2A55103DE10A /* Pods-HanziVoiceTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HanziVoiceTests-frameworks.sh"; sourceTree = "<group>"; };
+		4401A0AC7147F353F25404818AD01B70 /* Pods_HanziVoiceUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_HanziVoiceUITests.framework; path = "Pods-HanziVoiceUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		44EE37E8BF436A90A9C40AD27A182DB2 /* Expression.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Expression.swift; path = Sources/SQLite/Typed/Expression.swift; sourceTree = "<group>"; };
+		453FE2FDB7E36D912CB47FABCDDA3B08 /* Pods-HanziVoiceTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HanziVoiceTests-resources.sh"; sourceTree = "<group>"; };
+		4B4C8E0D8DB99B4482E2549FEAE620B8 /* FTS5.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FTS5.swift; path = Sources/SQLite/Extensions/FTS5.swift; sourceTree = "<group>"; };
+		527BE33E50CD9FFC70378A189D1FE88B /* Pods-HanziVoiceUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HanziVoiceUITests-dummy.m"; sourceTree = "<group>"; };
+		5A3AF128EBD27BA83DB1AF9BA0F1B4BF /* Pods-HanziVoice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HanziVoice.debug.xcconfig"; sourceTree = "<group>"; };
+		5AE2EFBEFDE20C4DDD8B3398D8AE5AE8 /* fts3_tokenizer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = fts3_tokenizer.h; path = Sources/SQLiteObjc/fts3_tokenizer.h; sourceTree = "<group>"; };
+		5D6064E59DA0BAEB230037E52E522BE9 /* Pods-HanziVoiceUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HanziVoiceUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		60FAE93532FD5578A02AF3CC523A3408 /* CoreFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CoreFunctions.swift; path = Sources/SQLite/Typed/CoreFunctions.swift; sourceTree = "<group>"; };
+		651F6A1AD54EEAECC40FDA3535E2DD27 /* Pods-HanziVoiceTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HanziVoiceTests-dummy.m"; sourceTree = "<group>"; };
+		66675A920C922FCC43D08D8EBFD5A8B0 /* Pods-HanziVoiceTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HanziVoiceTests-umbrella.h"; sourceTree = "<group>"; };
+		680617B7B3999D016982CD479DADCCB0 /* Blob.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Blob.swift; path = Sources/SQLite/Core/Blob.swift; sourceTree = "<group>"; };
+		7C35B96AAE74E2D85E4F7F02CDAA200E /* SQLite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SQLite.framework; path = SQLite.swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CB4780A7DFC247126FA3DED1BC1200E /* Pods-HanziVoice-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HanziVoice-acknowledgements.markdown"; sourceTree = "<group>"; };
+		7DA541C5EBBDD8421AA70AD631BEE72B /* Pods-HanziVoiceTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-HanziVoiceTests.modulemap"; sourceTree = "<group>"; };
+		7EB79BC6109B104F83E3ED96C9BB10D5 /* Pods-HanziVoiceUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HanziVoiceUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		84D475A76C89144B85B1C764686D3739 /* Pods-HanziVoice-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HanziVoice-dummy.m"; sourceTree = "<group>"; };
+		88BFCDC2C48A9AAC024D78C7786357F9 /* SQLite.swift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SQLite.swift.xcconfig; sourceTree = "<group>"; };
+		8F1BB2A91A0BC2A9FD30BC788CD5CA33 /* Pods-HanziVoice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HanziVoice.release.xcconfig"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		95FE00FC1AD17B0D71F8D9DBAB17ECC4 /* Pods-HanziVoiceUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HanziVoiceUITests-resources.sh"; sourceTree = "<group>"; };
+		96600A78FEC066BF8931D7A58FBF0F16 /* Statement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Statement.swift; path = Sources/SQLite/Core/Statement.swift; sourceTree = "<group>"; };
+		9C7341F991519864E32831370092D198 /* Pods-HanziVoiceUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HanziVoiceUITests.release.xcconfig"; sourceTree = "<group>"; };
+		9DE06F129836BA95B0BE2222991D2BD0 /* Value.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Value.swift; path = Sources/SQLite/Core/Value.swift; sourceTree = "<group>"; };
+		A2C5D76BD109C46DEC526A712FC4A8BB /* Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Helpers.swift; path = Sources/SQLite/Helpers.swift; sourceTree = "<group>"; };
+		A98C3E226AEAA0F9E0CD9A4815F14DC5 /* Pods-HanziVoice-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HanziVoice-frameworks.sh"; sourceTree = "<group>"; };
+		A990E6972A08B5DE2D0DBCB78735BB06 /* Pods_HanziVoiceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_HanziVoiceTests.framework; path = "Pods-HanziVoiceTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF7F8DDFC50FE6ACA57F6A16E253F8DC /* SQLite-Bridging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SQLite-Bridging.h"; path = "Sources/SQLiteObjc/include/SQLite-Bridging.h"; sourceTree = "<group>"; };
+		B7A99896DB5D793228657B5F5EC525DA /* FTS4.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FTS4.swift; path = Sources/SQLite/Extensions/FTS4.swift; sourceTree = "<group>"; };
+		B88C5FD0C85A5AE4583CC7DB512E6820 /* SQLite.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SQLite.h; path = Sources/SQLite/SQLite.h; sourceTree = "<group>"; };
+		BDA86AD441076D928D0621530CD5E745 /* Operators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Operators.swift; path = Sources/SQLite/Typed/Operators.swift; sourceTree = "<group>"; };
+		BDF1CD5AB785DFE10157D7616D0CC678 /* Pods-HanziVoiceUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HanziVoiceUITests-frameworks.sh"; sourceTree = "<group>"; };
+		C0C62BB93155E7CB9216B91BC476B0DD /* Pods_HanziVoice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_HanziVoice.framework; path = "Pods-HanziVoice.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA3ED8D54211455DE25A4DA036694445 /* SQLite.swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SQLite.swift-prefix.pch"; sourceTree = "<group>"; };
+		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		CCF813C6D3C0824E1BCFDACADE6109F5 /* Connection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Connection.swift; path = Sources/SQLite/Core/Connection.swift; sourceTree = "<group>"; };
+		CD0DD77F5576AAA6C7DFD404E49BAF03 /* Pods-HanziVoiceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HanziVoiceTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D58EDA2CB71E51EE0B5056A525C6DD84 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7B7855DE178D22988512E88C68325BE /* Collation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Collation.swift; path = Sources/SQLite/Typed/Collation.swift; sourceTree = "<group>"; };
+		DA7CCC1A073BC5540EA969CA71F0C552 /* Setter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Setter.swift; path = Sources/SQLite/Typed/Setter.swift; sourceTree = "<group>"; };
+		E3604146EBE5402AE5583CB6FB897B64 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E667D63233F61B551F3B93AF184020E0 /* Foundation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Foundation.swift; path = Sources/SQLite/Foundation.swift; sourceTree = "<group>"; };
+		EFE07954306C5B3DD3158989D7EAE60C /* Pods-HanziVoiceUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HanziVoiceUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		FF98B7BBADF63A0AF80D7829FA6F77B9 /* Schema.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Schema.swift; path = Sources/SQLite/Typed/Schema.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1546BAC1335788BDDFAA7B0FE65ECB72 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				294C1784B27B59D7BCC43FE78E1E8EEB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56BB521B588D29EFA08603C6CC28BB34 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4A2335B7F3E83EE37BCA61806FB0E1C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6470D24E574B21F0143C5C40F92EE05A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4B1838663633BD514C56D0C202C8DFC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		743075223AD3417250E64A2B40C7C16F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1975A8DF6BA0F04157D8E9B2CD70172D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034A2B751FD1449F2EE9A5F401662E48 /* Pods-HanziVoiceTests */ = {
+			isa = PBXGroup;
+			children = (
+				E3604146EBE5402AE5583CB6FB897B64 /* Info.plist */,
+				7DA541C5EBBDD8421AA70AD631BEE72B /* Pods-HanziVoiceTests.modulemap */,
+				007689E1265A9E39442E5A48C56127F6 /* Pods-HanziVoiceTests-acknowledgements.markdown */,
+				3A75380C4EF4FDC87CA9DD0C92D387E8 /* Pods-HanziVoiceTests-acknowledgements.plist */,
+				651F6A1AD54EEAECC40FDA3535E2DD27 /* Pods-HanziVoiceTests-dummy.m */,
+				4039E2BB65E5BAFED07D2A55103DE10A /* Pods-HanziVoiceTests-frameworks.sh */,
+				453FE2FDB7E36D912CB47FABCDDA3B08 /* Pods-HanziVoiceTests-resources.sh */,
+				66675A920C922FCC43D08D8EBFD5A8B0 /* Pods-HanziVoiceTests-umbrella.h */,
+				CD0DD77F5576AAA6C7DFD404E49BAF03 /* Pods-HanziVoiceTests.debug.xcconfig */,
+				1FC07BA4F995DCF0A22B0290D2BD6606 /* Pods-HanziVoiceTests.release.xcconfig */,
+			);
+			name = "Pods-HanziVoiceTests";
+			path = "Target Support Files/Pods-HanziVoiceTests";
+			sourceTree = "<group>";
+		};
+		0CE5F9160B067C829D364E72878D0583 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1EC3C1E6C3B57B46326B94BAB568B649 /* Info.plist */,
+				1D7DA9FB08FD2A913967F0D7996B8701 /* SQLite.swift.modulemap */,
+				88BFCDC2C48A9AAC024D78C7786357F9 /* SQLite.swift.xcconfig */,
+				2D30459F9DC30876AF6C299D26C7CE48 /* SQLite.swift-dummy.m */,
+				CA3ED8D54211455DE25A4DA036694445 /* SQLite.swift-prefix.pch */,
+				27B2D491F0A9B062233011B873DC118C /* SQLite.swift-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SQLite.swift";
+			sourceTree = "<group>";
+		};
+		42A565AFFAD6D5669C3E9A617B18206F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6BF538A5818A9423DCAFBA3FE993650B /* SQLite.swift */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		545101D04E13F4705F7320B5D7294FCC /* Pods-HanziVoiceUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D58EDA2CB71E51EE0B5056A525C6DD84 /* Info.plist */,
+				0D7682EBC69EAB5C65063872DB9F378E /* Pods-HanziVoiceUITests.modulemap */,
+				5D6064E59DA0BAEB230037E52E522BE9 /* Pods-HanziVoiceUITests-acknowledgements.markdown */,
+				7EB79BC6109B104F83E3ED96C9BB10D5 /* Pods-HanziVoiceUITests-acknowledgements.plist */,
+				527BE33E50CD9FFC70378A189D1FE88B /* Pods-HanziVoiceUITests-dummy.m */,
+				BDF1CD5AB785DFE10157D7616D0CC678 /* Pods-HanziVoiceUITests-frameworks.sh */,
+				95FE00FC1AD17B0D71F8D9DBAB17ECC4 /* Pods-HanziVoiceUITests-resources.sh */,
+				0CE94E4C5FA4BF75BEBF87448819C84A /* Pods-HanziVoiceUITests-umbrella.h */,
+				EFE07954306C5B3DD3158989D7EAE60C /* Pods-HanziVoiceUITests.debug.xcconfig */,
+				9C7341F991519864E32831370092D198 /* Pods-HanziVoiceUITests.release.xcconfig */,
+			);
+			name = "Pods-HanziVoiceUITests";
+			path = "Target Support Files/Pods-HanziVoiceUITests";
+			sourceTree = "<group>";
+		};
+		5471E9B3119B1607E6F7CFAC9AD29C98 /* Pods-HanziVoice */ = {
+			isa = PBXGroup;
+			children = (
+				22DD805114DA2B424271203374E11C1B /* Info.plist */,
+				370926C12AB33A08E2FCAEDA24C56EE5 /* Pods-HanziVoice.modulemap */,
+				7CB4780A7DFC247126FA3DED1BC1200E /* Pods-HanziVoice-acknowledgements.markdown */,
+				2CF5D038A9D57F189C0EF9E5821E2898 /* Pods-HanziVoice-acknowledgements.plist */,
+				84D475A76C89144B85B1C764686D3739 /* Pods-HanziVoice-dummy.m */,
+				A98C3E226AEAA0F9E0CD9A4815F14DC5 /* Pods-HanziVoice-frameworks.sh */,
+				35882B17B11D978090FA3DE2F4E0C112 /* Pods-HanziVoice-resources.sh */,
+				3AB03E3CA2F3ED5DE5A036AFF2D70C76 /* Pods-HanziVoice-umbrella.h */,
+				5A3AF128EBD27BA83DB1AF9BA0F1B4BF /* Pods-HanziVoice.debug.xcconfig */,
+				8F1BB2A91A0BC2A9FD30BC788CD5CA33 /* Pods-HanziVoice.release.xcconfig */,
+			);
+			name = "Pods-HanziVoice";
+			path = "Target Support Files/Pods-HanziVoice";
+			sourceTree = "<group>";
+		};
+		6BF538A5818A9423DCAFBA3FE993650B /* SQLite.swift */ = {
+			isa = PBXGroup;
+			children = (
+				6E4CDA0705C72EBBEAC4EAD992E1850C /* standard */,
+				0CE5F9160B067C829D364E72878D0583 /* Support Files */,
+			);
+			name = SQLite.swift;
+			path = SQLite.swift;
+			sourceTree = "<group>";
+		};
+		6E4CDA0705C72EBBEAC4EAD992E1850C /* standard */ = {
+			isa = PBXGroup;
+			children = (
+				23E934E5F923C9742E63347D5512C322 /* AggregateFunctions.swift */,
+				680617B7B3999D016982CD479DADCCB0 /* Blob.swift */,
+				D7B7855DE178D22988512E88C68325BE /* Collation.swift */,
+				CCF813C6D3C0824E1BCFDACADE6109F5 /* Connection.swift */,
+				60FAE93532FD5578A02AF3CC523A3408 /* CoreFunctions.swift */,
+				348491EAD9C18B0EEB2E855815254774 /* CustomFunctions.swift */,
+				44EE37E8BF436A90A9C40AD27A182DB2 /* Expression.swift */,
+				E667D63233F61B551F3B93AF184020E0 /* Foundation.swift */,
+				5AE2EFBEFDE20C4DDD8B3398D8AE5AE8 /* fts3_tokenizer.h */,
+				B7A99896DB5D793228657B5F5EC525DA /* FTS4.swift */,
+				4B4C8E0D8DB99B4482E2549FEAE620B8 /* FTS5.swift */,
+				A2C5D76BD109C46DEC526A712FC4A8BB /* Helpers.swift */,
+				BDA86AD441076D928D0621530CD5E745 /* Operators.swift */,
+				3FCCE88ECC9D892349AB6CB3160246D9 /* Query.swift */,
+				0F331ABE5223829EDFFC088184DFA981 /* RTree.swift */,
+				FF98B7BBADF63A0AF80D7829FA6F77B9 /* Schema.swift */,
+				DA7CCC1A073BC5540EA969CA71F0C552 /* Setter.swift */,
+				B88C5FD0C85A5AE4583CC7DB512E6820 /* SQLite.h */,
+				AF7F8DDFC50FE6ACA57F6A16E253F8DC /* SQLite-Bridging.h */,
+				0E070D9E44393CD520D0B1AF87A6736D /* SQLite-Bridging.m */,
+				96600A78FEC066BF8931D7A58FBF0F16 /* Statement.swift */,
+				9DE06F129836BA95B0BE2222991D2BD0 /* Value.swift */,
+			);
+			name = standard;
+			sourceTree = "<group>";
+		};
+		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				42A565AFFAD6D5669C3E9A617B18206F /* Pods */,
+				866D1F37FFB9788004C7AF2E93352E55 /* Products */,
+				AF1C7130D3535F6ECBB17582892465CF /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		866D1F37FFB9788004C7AF2E93352E55 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C0C62BB93155E7CB9216B91BC476B0DD /* Pods_HanziVoice.framework */,
+				A990E6972A08B5DE2D0DBCB78735BB06 /* Pods_HanziVoiceTests.framework */,
+				4401A0AC7147F353F25404818AD01B70 /* Pods_HanziVoiceUITests.framework */,
+				7C35B96AAE74E2D85E4F7F02CDAA200E /* SQLite.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AF1C7130D3535F6ECBB17582892465CF /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5471E9B3119B1607E6F7CFAC9AD29C98 /* Pods-HanziVoice */,
+				034A2B751FD1449F2EE9A5F401662E48 /* Pods-HanziVoiceTests */,
+				545101D04E13F4705F7320B5D7294FCC /* Pods-HanziVoiceUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		757D178B36EF9CC2931A94A07B9B3984 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17E32F3355BC68962A86F64E1760D132 /* Pods-HanziVoice-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89400C3F72F227D80FDFDE089DA0C091 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0ED8F072B320D7617AC4C8443AD3A42A /* fts3_tokenizer.h in Headers */,
+				70052AAC4704A66884F74480AC83E3E8 /* SQLite-Bridging.h in Headers */,
+				BA0CA653BA5C8ABB6EE894C2C0AFF429 /* SQLite.h in Headers */,
+				092A5C98D4E15287179422AD5A866047 /* SQLite.swift-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC7BF1C914F28C6095CBBD17B044AAB2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7755C7010D0BEE52054C3DF9838A55C7 /* Pods-HanziVoiceUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3175F0052D3C89105250C0E6CD633DE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02722D15B86FAA560659710426D6C247 /* Pods-HanziVoiceTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		5F53E84366C33871CE7340F2A5E538C8 /* SQLite.swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C8185C0DB5A9C0F451B016249E9C91AC /* Build configuration list for PBXNativeTarget "SQLite.swift" */;
+			buildPhases = (
+				B1D5B1B61EEE5EBD312174C45A19E201 /* Sources */,
+				56BB521B588D29EFA08603C6CC28BB34 /* Frameworks */,
+				89400C3F72F227D80FDFDE089DA0C091 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SQLite.swift;
+			productName = SQLite.swift;
+			productReference = 7C35B96AAE74E2D85E4F7F02CDAA200E /* SQLite.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		75F017E6865DE5199899AB54876C7E10 /* Pods-HanziVoiceUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E601AB7027AF5029FAA1293E258A0113 /* Build configuration list for PBXNativeTarget "Pods-HanziVoiceUITests" */;
+			buildPhases = (
+				50F73B7E423C37F084273E6D06A356F0 /* Sources */,
+				1546BAC1335788BDDFAA7B0FE65ECB72 /* Frameworks */,
+				AC7BF1C914F28C6095CBBD17B044AAB2 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-HanziVoiceUITests";
+			productName = "Pods-HanziVoiceUITests";
+			productReference = 4401A0AC7147F353F25404818AD01B70 /* Pods_HanziVoiceUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		915DA66F7747FE0F43F6BB7BF6EF67B2 /* Pods-HanziVoiceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAC5D0391DDFA9E2308EE022AC7099F9 /* Build configuration list for PBXNativeTarget "Pods-HanziVoiceTests" */;
+			buildPhases = (
+				E924456525070714FB14244AED33161A /* Sources */,
+				6470D24E574B21F0143C5C40F92EE05A /* Frameworks */,
+				D3175F0052D3C89105250C0E6CD633DE /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-HanziVoiceTests";
+			productName = "Pods-HanziVoiceTests";
+			productReference = A990E6972A08B5DE2D0DBCB78735BB06 /* Pods_HanziVoiceTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DA6F58692626D89728577210572EEB83 /* Pods-HanziVoice */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CDCD25F446565D5627745512FA2161DB /* Build configuration list for PBXNativeTarget "Pods-HanziVoice" */;
+			buildPhases = (
+				864056870F3CD572AD5B94AE7C0747AC /* Sources */,
+				743075223AD3417250E64A2B40C7C16F /* Frameworks */,
+				757D178B36EF9CC2931A94A07B9B3984 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				527812990C0EBACB095ADB53B866669F /* PBXTargetDependency */,
+			);
+			name = "Pods-HanziVoice";
+			productName = "Pods-HanziVoice";
+			productReference = C0C62BB93155E7CB9216B91BC476B0DD /* Pods_HanziVoice.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 866D1F37FFB9788004C7AF2E93352E55 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DA6F58692626D89728577210572EEB83 /* Pods-HanziVoice */,
+				915DA66F7747FE0F43F6BB7BF6EF67B2 /* Pods-HanziVoiceTests */,
+				75F017E6865DE5199899AB54876C7E10 /* Pods-HanziVoiceUITests */,
+				5F53E84366C33871CE7340F2A5E538C8 /* SQLite.swift */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		50F73B7E423C37F084273E6D06A356F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				903E29EF2AA8531BE818C6770555AD61 /* Pods-HanziVoiceUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		864056870F3CD572AD5B94AE7C0747AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8177560682EC26F4740A9FD0A65978F /* Pods-HanziVoice-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1D5B1B61EEE5EBD312174C45A19E201 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F961FF012F2F2C4EBD2FCB89BE1B495C /* AggregateFunctions.swift in Sources */,
+				659197E0E6F29323D52991FFD33E3511 /* Blob.swift in Sources */,
+				F030675FD663D9C89E8235C555EA3B2B /* Collation.swift in Sources */,
+				ED915DC5901B9491DAEFE243CCFEE41A /* Connection.swift in Sources */,
+				5BDBCA69FDA1AE2BE69EE1408017FABF /* CoreFunctions.swift in Sources */,
+				475267E1B75987F81F26B4D807B43BEE /* CustomFunctions.swift in Sources */,
+				DA6E1D97DA12EA8765BF6677FDCD642A /* Expression.swift in Sources */,
+				8FC7463E865D46AD11B0F7A5DCDAD1DC /* Foundation.swift in Sources */,
+				CDB2149047D280FD9978FD3D4044D5F3 /* FTS4.swift in Sources */,
+				A2B4076254AD1A218548D1244144D5A0 /* FTS5.swift in Sources */,
+				61714DE9FFDC9E5ED1B3A0DA5347C93E /* Helpers.swift in Sources */,
+				D33C001E9CE4FCB43E5CC9D4A6577BAA /* Operators.swift in Sources */,
+				1746349A9750EA7A436E770FD6522BDC /* Query.swift in Sources */,
+				77AC64E8224AFCB4266C76B37D829421 /* RTree.swift in Sources */,
+				881395183035B8ECFF6FA1FE08BCD429 /* Schema.swift in Sources */,
+				F021AF78DE179C2072394B5BE52FD071 /* Setter.swift in Sources */,
+				110E2C4B985D95F273F80947117D4A48 /* SQLite-Bridging.m in Sources */,
+				0C71EA41279AD4DD0BA375DC54EB961D /* SQLite.swift-dummy.m in Sources */,
+				47AE89F7EA1E95CC258485C30A20339A /* Statement.swift in Sources */,
+				41DFF61D69635EDE80806A6305B56566 /* Value.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E924456525070714FB14244AED33161A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D0DE97B9766A131815DCD5F3B749DEE /* Pods-HanziVoiceTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		527812990C0EBACB095ADB53B866669F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SQLite.swift;
+			target = 5F53E84366C33871CE7340F2A5E538C8 /* SQLite.swift */;
+			targetProxy = 3AAFC2A2797449DE2E1578124157407E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		4FE670E5512C4C3945160999DC2C8E14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F1BB2A91A0BC2A9FD30BC788CD5CA33 /* Pods-HanziVoice.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-HanziVoice/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HanziVoice/Pods-HanziVoice.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_HanziVoice;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		574543238EF3779507C60F2EFEBE625D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88BFCDC2C48A9AAC024D78C7786357F9 /* SQLite.swift.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SQLite.swift/SQLite.swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SQLite.swift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SQLite.swift/SQLite.swift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SQLite;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		673254EEAF0B5BF4596080C749645884 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		76273D22CC47A632F8CDF61984FD3175 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FC07BA4F995DCF0A22B0290D2BD6606 /* Pods-HanziVoiceTests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-HanziVoiceTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HanziVoiceTests/Pods-HanziVoiceTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_HanziVoiceTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7915E6776719F3A3083038A058CA635D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD0DD77F5576AAA6C7DFD404E49BAF03 /* Pods-HanziVoiceTests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-HanziVoiceTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HanziVoiceTests/Pods-HanziVoiceTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_HanziVoiceTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		924838A323FFA63487A1253D05F499D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C7341F991519864E32831370092D198 /* Pods-HanziVoiceUITests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-HanziVoiceUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HanziVoiceUITests/Pods-HanziVoiceUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_HanziVoiceUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B1078AB6844E8E02D6E8F983E14CCB37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A3AF128EBD27BA83DB1AF9BA0F1B4BF /* Pods-HanziVoice.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-HanziVoice/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HanziVoice/Pods-HanziVoice.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_HanziVoice;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C312441904B3D9D952DAFCA413147A98 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88BFCDC2C48A9AAC024D78C7786357F9 /* SQLite.swift.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SQLite.swift/SQLite.swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SQLite.swift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SQLite.swift/SQLite.swift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SQLite;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CC2B9E711E5500F84AB4F859357C0B65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFE07954306C5B3DD3158989D7EAE60C /* Pods-HanziVoiceUITests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-HanziVoiceUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HanziVoiceUITests/Pods-HanziVoiceUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_HanziVoiceUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E4F26E6EB105713A6A7E7E2E283AC2DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4F26E6EB105713A6A7E7E2E283AC2DF /* Debug */,
+				673254EEAF0B5BF4596080C749645884 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C8185C0DB5A9C0F451B016249E9C91AC /* Build configuration list for PBXNativeTarget "SQLite.swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				574543238EF3779507C60F2EFEBE625D /* Debug */,
+				C312441904B3D9D952DAFCA413147A98 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CDCD25F446565D5627745512FA2161DB /* Build configuration list for PBXNativeTarget "Pods-HanziVoice" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B1078AB6844E8E02D6E8F983E14CCB37 /* Debug */,
+				4FE670E5512C4C3945160999DC2C8E14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E601AB7027AF5029FAA1293E258A0113 /* Build configuration list for PBXNativeTarget "Pods-HanziVoiceUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC2B9E711E5500F84AB4F859357C0B65 /* Debug */,
+				924838A323FFA63487A1253D05F499D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAC5D0391DDFA9E2308EE022AC7099F9 /* Build configuration list for PBXNativeTarget "Pods-HanziVoiceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7915E6776719F3A3083038A058CA635D /* Debug */,
+				76273D22CC47A632F8CDF61984FD3175 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

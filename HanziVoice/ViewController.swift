@@ -10,9 +10,31 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var searchBar: UISearchBar!
+    
+    @IBOutlet weak var queryMode: UIButton!
+    
+    @IBOutlet weak var searchInKuangxYonhOnly: UISwitch!
+    @IBOutlet weak var allowVariants: UISwitch!
+    @IBOutlet weak var toneInsensitive: UISwitch!
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    
+    let db = MCPDictDB()
+    var chars:[MCPChar] = [] {
+        didSet {
+            self.tableView.reloadData()
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.automaticallyAdjustsScrollViewInsets = false
+        searchBar.delegate = self
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 135
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,3 +45,27 @@ class ViewController: UIViewController {
 
 }
 
+
+extension ViewController : UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        let text = searchBar.text ?? ""
+        self.chars = db.search(text)
+        
+    }
+}
+
+extension ViewController : UITableViewDelegate, UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.chars.count
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: MCPCharTableViewCell.identifier) as! MCPCharTableViewCell
+        let char = self.chars[indexPath.row]
+        cell.model = char
+        return cell
+    }
+}

@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="MK7-6L-F6i">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--汉字检索-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="HanziVoice" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,288 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ghy-QR-ctK">
+                                <rect key="frame" x="0.0" y="64" width="375" height="239"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="AcP-vb-6xa">
+                                        <rect key="frame" x="8" y="8" width="359" height="223"/>
+                                        <subviews>
+                                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="输入待检索汉字" translatesAutoresizingMaskIntoConstraints="NO" id="7kg-vT-xB9">
+                                                <rect key="frame" x="0.0" y="0.0" width="359" height="44"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="search" enablesReturnKeyAutomatically="YES"/>
+                                            </searchBar>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="VqC-fN-X7O">
+                                                <rect key="frame" x="0.0" y="58" width="359" height="30"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="查詢模式" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dA5-C5-XNo">
+                                                        <rect key="frame" x="0.0" y="0.0" width="69.5" height="30"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z1q-Mh-6La">
+                                                        <rect key="frame" x="328" y="0.0" width="31" height="30"/>
+                                                        <state key="normal" title="漢字"/>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="OH8-Nx-Enb">
+                                                <rect key="frame" x="0.0" y="102" width="359" height="31"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="僅在《廣韻》內查找" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCt-R9-fBh">
+                                                        <rect key="frame" x="0.0" y="0.0" width="302" height="31"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rO5-yd-3ME">
+                                                        <rect key="frame" x="310" y="0.0" width="51" height="31"/>
+                                                    </switch>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="HMJ-62-KxI">
+                                                <rect key="frame" x="0.0" y="147" width="359" height="31"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="簡繁、異體轉換" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4TD-dG-pCM">
+                                                        <rect key="frame" x="0.0" y="0.0" width="302" height="31"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gMP-sm-x4s">
+                                                        <rect key="frame" x="310" y="0.0" width="51" height="31"/>
+                                                    </switch>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0Vx-5u-blG">
+                                                <rect key="frame" x="0.0" y="192" width="359" height="31"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="聲調不敏感" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XfE-Ky-aII">
+                                                        <rect key="frame" x="0.0" y="0.0" width="302" height="31"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uvP-u5-9ud">
+                                                        <rect key="frame" x="310" y="0.0" width="51" height="31"/>
+                                                    </switch>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="AcP-vb-6xa" secondAttribute="bottom" constant="8" id="3nd-wi-vgz"/>
+                                    <constraint firstAttribute="leadingMargin" secondItem="AcP-vb-6xa" secondAttribute="leading" id="A7i-8P-PpI"/>
+                                    <constraint firstItem="AcP-vb-6xa" firstAttribute="top" secondItem="Ghy-QR-ctK" secondAttribute="top" constant="8" id="dyw-qu-JYy"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="AcP-vb-6xa" secondAttribute="trailing" id="fQd-IG-ATY"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="xNP-i4-HMf">
+                                <rect key="frame" x="0.0" y="303" width="375" height="364"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MCPCharTableViewCell" rowHeight="160" id="xiH-BA-jpK" customClass="MCPCharTableViewCell" customModule="HanziVoice" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="56" width="375" height="160"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xiH-BA-jpK" id="ZIQ-VP-F01">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="159"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" text="一" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Is-60-8Gl">
+                                                    <rect key="frame" x="8" y="16" width="63.5" height="60"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                    <color key="textColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" text="U+4E00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KQG-kf-FyI">
+                                                    <rect key="frame" x="8" y="84" width="64" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="240" verticalHuggingPriority="239" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Fpc-kq-XrH">
+                                                    <rect key="frame" x="79.5" y="8" width="287.5" height="143.5"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="leM-aZ-ohc" customClass="MCPVoiceView" customModule="HanziVoice" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="287.5" height="0.0"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="image" keyPath="image" value="lang_mc"/>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="text" value="qjit (影臻質A三開 入声4質)"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="2oJ-vZ-2cm">
+                                                            <rect key="frame" x="0.0" y="8" width="287.5" height="50"/>
+                                                            <subviews>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z8Y-so-HcR" customClass="MCPVoiceView" customModule="HanziVoice" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="144" height="50"/>
+                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="image" keyPath="image" value="lang_pu"/>
+                                                                        <userDefinedRuntimeAttribute type="string" keyPath="text" value="yī"/>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </view>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UUE-5t-NuK" customClass="MCPVoiceView" customModule="HanziVoice" customModuleProvider="target">
+                                                                    <rect key="frame" x="144" y="0.0" width="143.5" height="50"/>
+                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="image" keyPath="image" value="lang_ct"/>
+                                                                        <userDefinedRuntimeAttribute type="string" keyPath="text" value="jat1"/>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </view>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="kz5-7X-VIb">
+                                                            <rect key="frame" x="0.0" y="66" width="287.5" height="20.5"/>
+                                                            <subviews>
+                                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2JL-dZ-AGV" customClass="MCPVoiceView" customModule="HanziVoice" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="144" height="20.5"/>
+                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="image" keyPath="image" value="lang_sh"/>
+                                                                        <userDefinedRuntimeAttribute type="string" keyPath="text" value="ih7"/>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </view>
+                                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e2K-vU-tng" customClass="MCPVoiceView" customModule="HanziVoice" customModuleProvider="target">
+                                                                    <rect key="frame" x="144" y="0.0" width="143.5" height="20.5"/>
+                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="image" keyPath="image" value="lang_mn"/>
+                                                                        <userDefinedRuntimeAttribute type="string" keyPath="text" value="it4, [tsit8]"/>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </view>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="6z2-tg-cUq">
+                                                            <rect key="frame" x="0.0" y="94.5" width="287.5" height="20.5"/>
+                                                            <subviews>
+                                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nUA-4r-8Pw" customClass="MCPVoiceView" customModule="HanziVoice" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="144" height="20.5"/>
+                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="image" keyPath="image" value="lang_kr"/>
+                                                                        <userDefinedRuntimeAttribute type="string" keyPath="text" value="일"/>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </view>
+                                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ut4-0Z-RXA" customClass="MCPVoiceView" customModule="HanziVoice" customModuleProvider="target">
+                                                                    <rect key="frame" x="144" y="0.0" width="143.5" height="20.5"/>
+                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="image" keyPath="image" value="lang_vn"/>
+                                                                        <userDefinedRuntimeAttribute type="string" keyPath="text" value="nhất"/>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </view>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="wOk-C5-U6c">
+                                                            <rect key="frame" x="0.0" y="123" width="287.5" height="20.5"/>
+                                                            <subviews>
+                                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mwu-ki-i7S" customClass="MCPVoiceView" customModule="HanziVoice" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="144" height="20.5"/>
+                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="image" keyPath="image" value="lang_jp_go"/>
+                                                                        <userDefinedRuntimeAttribute type="string" keyPath="text" value="いち"/>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </view>
+                                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="upI-fz-2Mo" customClass="MCPVoiceView" customModule="HanziVoice" customModuleProvider="target">
+                                                                    <rect key="frame" x="144" y="0.0" width="143.5" height="20.5"/>
+                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="image" keyPath="image" value="lang_jp_kan"/>
+                                                                        <userDefinedRuntimeAttribute type="string" keyPath="text" value="いつ"/>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </view>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="KQG-kf-FyI" firstAttribute="top" secondItem="2Is-60-8Gl" secondAttribute="bottom" constant="8" id="CBz-5A-Vga"/>
+                                                <constraint firstItem="KQG-kf-FyI" firstAttribute="leading" secondItem="ZIQ-VP-F01" secondAttribute="leadingMargin" id="Epv-SZ-ngI"/>
+                                                <constraint firstItem="2Is-60-8Gl" firstAttribute="leading" secondItem="ZIQ-VP-F01" secondAttribute="leadingMargin" id="R6v-7o-z10"/>
+                                                <constraint firstItem="2Is-60-8Gl" firstAttribute="top" secondItem="ZIQ-VP-F01" secondAttribute="topMargin" constant="8" id="Xt4-lP-a8R"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Fpc-kq-XrH" secondAttribute="bottom" id="Zi7-yO-Ifi"/>
+                                                <constraint firstItem="KQG-kf-FyI" firstAttribute="centerX" secondItem="2Is-60-8Gl" secondAttribute="centerX" id="fY0-ex-K1l"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Fpc-kq-XrH" secondAttribute="trailing" id="rt7-U5-hxk"/>
+                                                <constraint firstItem="Fpc-kq-XrH" firstAttribute="top" secondItem="ZIQ-VP-F01" secondAttribute="topMargin" id="u0M-Ch-0OP"/>
+                                                <constraint firstItem="Fpc-kq-XrH" firstAttribute="leading" secondItem="KQG-kf-FyI" secondAttribute="trailing" constant="8" id="x9x-Xp-SjU"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cantoneseView" destination="UUE-5t-NuK" id="9Vl-T5-W5k"/>
+                                            <outlet property="japaneseGoView" destination="Mwu-ki-i7S" id="3Qk-BQ-21P"/>
+                                            <outlet property="japaneseKanView" destination="upI-fz-2Mo" id="BK2-0U-Tnp"/>
+                                            <outlet property="koreanView" destination="nUA-4r-8Pw" id="YMK-bU-5db"/>
+                                            <outlet property="mandrinView" destination="Z8Y-so-HcR" id="XBe-bh-lCm"/>
+                                            <outlet property="middleChineseView" destination="leM-aZ-ohc" id="4N7-Fp-nx7"/>
+                                            <outlet property="minnaneseView" destination="e2K-vU-tng" id="G5D-w0-sdD"/>
+                                            <outlet property="shanghaieseView" destination="2JL-dZ-AGV" id="TFh-xC-On5"/>
+                                            <outlet property="unicodeLabel" destination="KQG-kf-FyI" id="M5i-du-Pho"/>
+                                            <outlet property="valueLabel" destination="2Is-60-8Gl" id="m1t-fs-oM6"/>
+                                            <outlet property="vietnameseView" destination="ut4-0Z-RXA" id="or4-0s-Dn1"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="xNP-i4-HMf" firstAttribute="leading" secondItem="Ghy-QR-ctK" secondAttribute="leading" id="340-Cx-0Sf"/>
+                            <constraint firstItem="xNP-i4-HMf" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="UiL-K3-e1H"/>
+                            <constraint firstItem="Ghy-QR-ctK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="a48-nM-xTc"/>
+                            <constraint firstAttribute="trailing" secondItem="Ghy-QR-ctK" secondAttribute="trailing" id="ayS-1P-RWN"/>
+                            <constraint firstItem="xNP-i4-HMf" firstAttribute="top" secondItem="Ghy-QR-ctK" secondAttribute="bottom" id="eJN-9H-WaI"/>
+                            <constraint firstItem="Ghy-QR-ctK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="qGk-h1-yrB"/>
+                            <constraint firstItem="xNP-i4-HMf" firstAttribute="trailing" secondItem="Ghy-QR-ctK" secondAttribute="trailing" id="zc8-oe-0Hg"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="汉字检索" id="HqL-7b-XnV"/>
+                    <connections>
+                        <outlet property="allowVariants" destination="gMP-sm-x4s" id="4nQ-ZZ-YJo"/>
+                        <outlet property="queryMode" destination="z1q-Mh-6La" id="Wto-2G-rH2"/>
+                        <outlet property="searchBar" destination="7kg-vT-xB9" id="LjN-g6-6We"/>
+                        <outlet property="searchInKuangxYonhOnly" destination="rO5-yd-3ME" id="HmY-Zy-BAc"/>
+                        <outlet property="tableView" destination="xNP-i4-HMf" id="gCl-fF-ndK"/>
+                        <outlet property="toneInsensitive" destination="uvP-u5-9ud" id="fn1-Wp-1AF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1079.2" y="138.98050974512745"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="3FE-U0-7OY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MK7-6L-F6i" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9e0-eF-5cU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="svY-BG-SKf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Osw-Pv-7Yq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="792.95352323838085"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="lang_ct" width="16" height="17"/>
+        <image name="lang_jp_go" width="29" height="17"/>
+        <image name="lang_jp_kan" width="29" height="17"/>
+        <image name="lang_kr" width="16" height="17"/>
+        <image name="lang_mc" width="29" height="17"/>
+        <image name="lang_mn" width="16" height="17"/>
+        <image name="lang_pu" width="16" height="17"/>
+        <image name="lang_sh" width="16" height="17"/>
+        <image name="lang_vn" width="16" height="17"/>
+    </resources>
 </document>

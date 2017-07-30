@@ -14,6 +14,26 @@
 		1A389C311F283D1500875A80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A389C2F1F283D1500875A80 /* LaunchScreen.storyboard */; };
 		1A389C3C1F283D1600875A80 /* HanziVoiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A389C3B1F283D1600875A80 /* HanziVoiceTests.swift */; };
 		1A389C471F283D1600875A80 /* HanziVoiceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A389C461F283D1600875A80 /* HanziVoiceUITests.swift */; };
+		1A7B5BA71F2C815600E5098E /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A7B5BA61F2C815600E5098E /* libsqlite3.0.tbd */; };
+		1A7B5BA91F2C816B00E5098E /* mcpdict.db in Resources */ = {isa = PBXBuildFile; fileRef = 1A7B5BA81F2C816B00E5098E /* mcpdict.db */; };
+		1A7B5BAB1F2C817C00E5098E /* DBReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7B5BAA1F2C817C00E5098E /* DBReader.swift */; };
+		1A9060AF1F2DB9910056A825 /* MCPCharTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9060AE1F2DB9910056A825 /* MCPCharTableViewCell.swift */; };
+		1A9060B31F2DC8130056A825 /* MCPVoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9060B21F2DC8130056A825 /* MCPVoiceView.swift */; };
+		1A9060B51F2DE7B30056A825 /* Orthography.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9060B41F2DE7B30056A825 /* Orthography.swift */; };
+		1A9060C01F2DEADB0056A825 /* orthography_ct_finals.tsv in Resources */ = {isa = PBXBuildFile; fileRef = 1A9060B61F2DEADB0056A825 /* orthography_ct_finals.tsv */; };
+		1A9060C11F2DEADB0056A825 /* orthography_ct_initials.tsv in Resources */ = {isa = PBXBuildFile; fileRef = 1A9060B71F2DEADB0056A825 /* orthography_ct_initials.tsv */; };
+		1A9060C21F2DEADB0056A825 /* orthography_hz_variants.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1A9060B81F2DEADB0056A825 /* orthography_hz_variants.txt */; };
+		1A9060C31F2DEADB0056A825 /* orthography_jp.tsv in Resources */ = {isa = PBXBuildFile; fileRef = 1A9060B91F2DEADB0056A825 /* orthography_jp.tsv */; };
+		1A9060C41F2DEADB0056A825 /* orthography_mc_bieng_sjyix.tsv in Resources */ = {isa = PBXBuildFile; fileRef = 1A9060BA1F2DEADB0056A825 /* orthography_mc_bieng_sjyix.tsv */; };
+		1A9060C51F2DEADB0056A825 /* orthography_mc_finals.tsv in Resources */ = {isa = PBXBuildFile; fileRef = 1A9060BB1F2DEADB0056A825 /* orthography_mc_finals.tsv */; };
+		1A9060C61F2DEADB0056A825 /* orthography_mc_initials.tsv in Resources */ = {isa = PBXBuildFile; fileRef = 1A9060BC1F2DEADB0056A825 /* orthography_mc_initials.tsv */; };
+		1A9060C71F2DEADB0056A825 /* orthography_pu_bopomofo.tsv in Resources */ = {isa = PBXBuildFile; fileRef = 1A9060BD1F2DEADB0056A825 /* orthography_pu_bopomofo.tsv */; };
+		1A9060C81F2DEADB0056A825 /* orthography_pu_pinyin.tsv in Resources */ = {isa = PBXBuildFile; fileRef = 1A9060BE1F2DEADB0056A825 /* orthography_pu_pinyin.tsv */; };
+		1A9060C91F2DEADB0056A825 /* orthography_vn.tsv in Resources */ = {isa = PBXBuildFile; fileRef = 1A9060BF1F2DEADB0056A825 /* orthography_vn.tsv */; };
+		1A9060CC1F2DFA140056A825 /* String+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9060CB1F2DFA140056A825 /* String+Utils.swift */; };
+		3A875BB19C4F7C1A82F74DB1 /* Pods_HanziVoiceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2284B0C92198D4C0F6CC96C0 /* Pods_HanziVoiceTests.framework */; };
+		ADAA7AA17F17B81DC1D80F8C /* Pods_HanziVoiceUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2090F349FBAE346DAAF32277 /* Pods_HanziVoiceUITests.framework */; };
+		F9E2E0AF7D5CC0F14E6AB991 /* Pods_HanziVoice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ECE1CBF688772E909FC63E9 /* Pods_HanziVoice.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +54,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04C3D295C07A17851AD00D07 /* Pods-HanziVoiceUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HanziVoiceUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HanziVoiceUITests/Pods-HanziVoiceUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		1A389C231F283D1500875A80 /* HanziVoice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HanziVoice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A389C261F283D1500875A80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A389C281F283D1500875A80 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +68,32 @@
 		1A389C421F283D1600875A80 /* HanziVoiceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HanziVoiceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A389C461F283D1600875A80 /* HanziVoiceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HanziVoiceUITests.swift; sourceTree = "<group>"; };
 		1A389C481F283D1600875A80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A7B5BA61F2C815600E5098E /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		1A7B5BA81F2C816B00E5098E /* mcpdict.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = mcpdict.db; path = HanziVoice/mcpdict.db; sourceTree = SOURCE_ROOT; };
+		1A7B5BAA1F2C817C00E5098E /* DBReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBReader.swift; sourceTree = "<group>"; };
+		1A7B5BAC1F2C825400E5098E /* bridging-header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "bridging-header.h"; sourceTree = "<group>"; };
+		1A9060AE1F2DB9910056A825 /* MCPCharTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCPCharTableViewCell.swift; sourceTree = "<group>"; };
+		1A9060B21F2DC8130056A825 /* MCPVoiceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MCPVoiceView.swift; path = ../MCPVoiceView.swift; sourceTree = "<group>"; };
+		1A9060B41F2DE7B30056A825 /* Orthography.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Orthography.swift; sourceTree = "<group>"; };
+		1A9060B61F2DEADB0056A825 /* orthography_ct_finals.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = orthography_ct_finals.tsv; sourceTree = "<group>"; };
+		1A9060B71F2DEADB0056A825 /* orthography_ct_initials.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = orthography_ct_initials.tsv; sourceTree = "<group>"; };
+		1A9060B81F2DEADB0056A825 /* orthography_hz_variants.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = orthography_hz_variants.txt; sourceTree = "<group>"; };
+		1A9060B91F2DEADB0056A825 /* orthography_jp.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = orthography_jp.tsv; sourceTree = "<group>"; };
+		1A9060BA1F2DEADB0056A825 /* orthography_mc_bieng_sjyix.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = orthography_mc_bieng_sjyix.tsv; sourceTree = "<group>"; };
+		1A9060BB1F2DEADB0056A825 /* orthography_mc_finals.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = orthography_mc_finals.tsv; sourceTree = "<group>"; };
+		1A9060BC1F2DEADB0056A825 /* orthography_mc_initials.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = orthography_mc_initials.tsv; sourceTree = "<group>"; };
+		1A9060BD1F2DEADB0056A825 /* orthography_pu_bopomofo.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = orthography_pu_bopomofo.tsv; sourceTree = "<group>"; };
+		1A9060BE1F2DEADB0056A825 /* orthography_pu_pinyin.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = orthography_pu_pinyin.tsv; sourceTree = "<group>"; };
+		1A9060BF1F2DEADB0056A825 /* orthography_vn.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = orthography_vn.tsv; sourceTree = "<group>"; };
+		1A9060CB1F2DFA140056A825 /* String+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Utils.swift"; sourceTree = "<group>"; };
+		2090F349FBAE346DAAF32277 /* Pods_HanziVoiceUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HanziVoiceUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2284B0C92198D4C0F6CC96C0 /* Pods_HanziVoiceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HanziVoiceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8014460AAD415B3A60726D14 /* Pods-HanziVoiceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HanziVoiceTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HanziVoiceTests/Pods-HanziVoiceTests.release.xcconfig"; sourceTree = "<group>"; };
+		8ECE1CBF688772E909FC63E9 /* Pods_HanziVoice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HanziVoice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9315A83F976811356578C6E6 /* Pods-HanziVoice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HanziVoice.release.xcconfig"; path = "Pods/Target Support Files/Pods-HanziVoice/Pods-HanziVoice.release.xcconfig"; sourceTree = "<group>"; };
+		B59F5059DF57C7DFAD795097 /* Pods-HanziVoiceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HanziVoiceTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HanziVoiceTests/Pods-HanziVoiceTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E9AAEC7028B350968B004D72 /* Pods-HanziVoice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HanziVoice.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HanziVoice/Pods-HanziVoice.debug.xcconfig"; sourceTree = "<group>"; };
+		FA6508DAB5FA17B9A63313F8 /* Pods-HanziVoiceUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HanziVoiceUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HanziVoiceUITests/Pods-HanziVoiceUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +101,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A7B5BA71F2C815600E5098E /* libsqlite3.0.tbd in Frameworks */,
+				F9E2E0AF7D5CC0F14E6AB991 /* Pods_HanziVoice.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A875BB19C4F7C1A82F74DB1 /* Pods_HanziVoiceTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADAA7AA17F17B81DC1D80F8C /* Pods_HanziVoiceUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +132,8 @@
 				1A389C3A1F283D1600875A80 /* HanziVoiceTests */,
 				1A389C451F283D1600875A80 /* HanziVoiceUITests */,
 				1A389C241F283D1500875A80 /* Products */,
+				1A7B5BA51F2C815500E5098E /* Frameworks */,
+				A1DE7661B2B341B8F527AEE6 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,12 +150,19 @@
 		1A389C251F283D1500875A80 /* HanziVoice */ = {
 			isa = PBXGroup;
 			children = (
+				1A9060B21F2DC8130056A825 /* MCPVoiceView.swift */,
+				1A9060CA1F2DEAE10056A825 /* resources */,
 				1A389C261F283D1500875A80 /* AppDelegate.swift */,
 				1A389C281F283D1500875A80 /* ViewController.swift */,
 				1A389C2A1F283D1500875A80 /* Main.storyboard */,
+				1A9060AE1F2DB9910056A825 /* MCPCharTableViewCell.swift */,
+				1A9060B41F2DE7B30056A825 /* Orthography.swift */,
+				1A9060CB1F2DFA140056A825 /* String+Utils.swift */,
 				1A389C2D1F283D1500875A80 /* Assets.xcassets */,
 				1A389C2F1F283D1500875A80 /* LaunchScreen.storyboard */,
 				1A389C321F283D1500875A80 /* Info.plist */,
+				1A7B5BAA1F2C817C00E5098E /* DBReader.swift */,
+				1A7B5BAC1F2C825400E5098E /* bridging-header.h */,
 			);
 			path = HanziVoice;
 			sourceTree = "<group>";
@@ -125,6 +185,48 @@
 			path = HanziVoiceUITests;
 			sourceTree = "<group>";
 		};
+		1A7B5BA51F2C815500E5098E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1A7B5BA61F2C815600E5098E /* libsqlite3.0.tbd */,
+				8ECE1CBF688772E909FC63E9 /* Pods_HanziVoice.framework */,
+				2284B0C92198D4C0F6CC96C0 /* Pods_HanziVoiceTests.framework */,
+				2090F349FBAE346DAAF32277 /* Pods_HanziVoiceUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1A9060CA1F2DEAE10056A825 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				1A7B5BA81F2C816B00E5098E /* mcpdict.db */,
+				1A9060B61F2DEADB0056A825 /* orthography_ct_finals.tsv */,
+				1A9060B71F2DEADB0056A825 /* orthography_ct_initials.tsv */,
+				1A9060B81F2DEADB0056A825 /* orthography_hz_variants.txt */,
+				1A9060B91F2DEADB0056A825 /* orthography_jp.tsv */,
+				1A9060BA1F2DEADB0056A825 /* orthography_mc_bieng_sjyix.tsv */,
+				1A9060BB1F2DEADB0056A825 /* orthography_mc_finals.tsv */,
+				1A9060BC1F2DEADB0056A825 /* orthography_mc_initials.tsv */,
+				1A9060BD1F2DEADB0056A825 /* orthography_pu_bopomofo.tsv */,
+				1A9060BE1F2DEADB0056A825 /* orthography_pu_pinyin.tsv */,
+				1A9060BF1F2DEADB0056A825 /* orthography_vn.tsv */,
+			);
+			name = resources;
+			sourceTree = "<group>";
+		};
+		A1DE7661B2B341B8F527AEE6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E9AAEC7028B350968B004D72 /* Pods-HanziVoice.debug.xcconfig */,
+				9315A83F976811356578C6E6 /* Pods-HanziVoice.release.xcconfig */,
+				B59F5059DF57C7DFAD795097 /* Pods-HanziVoiceTests.debug.xcconfig */,
+				8014460AAD415B3A60726D14 /* Pods-HanziVoiceTests.release.xcconfig */,
+				04C3D295C07A17851AD00D07 /* Pods-HanziVoiceUITests.debug.xcconfig */,
+				FA6508DAB5FA17B9A63313F8 /* Pods-HanziVoiceUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +234,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1A389C4B1F283D1600875A80 /* Build configuration list for PBXNativeTarget "HanziVoice" */;
 			buildPhases = (
+				5DC331813988B3797E61A1C8 /* [CP] Check Pods Manifest.lock */,
 				1A389C1F1F283D1500875A80 /* Sources */,
 				1A389C201F283D1500875A80 /* Frameworks */,
 				1A389C211F283D1500875A80 /* Resources */,
+				130A5DAC2B1E53E4C6089866 /* [CP] Embed Pods Frameworks */,
+				47707E83E6B258DA95DC8A79 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +254,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1A389C4E1F283D1600875A80 /* Build configuration list for PBXNativeTarget "HanziVoiceTests" */;
 			buildPhases = (
+				13A49BDAF7BCD4C269637BC4 /* [CP] Check Pods Manifest.lock */,
 				1A389C331F283D1500875A80 /* Sources */,
 				1A389C341F283D1500875A80 /* Frameworks */,
 				1A389C351F283D1500875A80 /* Resources */,
+				C5F5F5D6CE7C60817AC027D2 /* [CP] Embed Pods Frameworks */,
+				12D26696D24CC701A72BC110 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +275,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1A389C511F283D1600875A80 /* Build configuration list for PBXNativeTarget "HanziVoiceUITests" */;
 			buildPhases = (
+				76B185BFCC3B5F0883A9D34C /* [CP] Check Pods Manifest.lock */,
 				1A389C3E1F283D1600875A80 /* Sources */,
 				1A389C3F1F283D1600875A80 /* Frameworks */,
 				1A389C401F283D1600875A80 /* Resources */,
+				15BA9BD9F6360FEE3D440399 /* [CP] Embed Pods Frameworks */,
+				D716C542CF836873348D007E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -236,8 +347,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A389C311F283D1500875A80 /* LaunchScreen.storyboard in Resources */,
+				1A9060C41F2DEADB0056A825 /* orthography_mc_bieng_sjyix.tsv in Resources */,
 				1A389C2E1F283D1500875A80 /* Assets.xcassets in Resources */,
+				1A7B5BA91F2C816B00E5098E /* mcpdict.db in Resources */,
+				1A9060C81F2DEADB0056A825 /* orthography_pu_pinyin.tsv in Resources */,
+				1A9060C11F2DEADB0056A825 /* orthography_ct_initials.tsv in Resources */,
+				1A9060C71F2DEADB0056A825 /* orthography_pu_bopomofo.tsv in Resources */,
+				1A9060C01F2DEADB0056A825 /* orthography_ct_finals.tsv in Resources */,
+				1A9060C31F2DEADB0056A825 /* orthography_jp.tsv in Resources */,
+				1A9060C91F2DEADB0056A825 /* orthography_vn.tsv in Resources */,
+				1A9060C21F2DEADB0056A825 /* orthography_hz_variants.txt in Resources */,
+				1A9060C51F2DEADB0056A825 /* orthography_mc_finals.tsv in Resources */,
 				1A389C2C1F283D1500875A80 /* Main.storyboard in Resources */,
+				1A9060C61F2DEADB0056A825 /* orthography_mc_initials.tsv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +379,144 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		12D26696D24CC701A72BC110 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HanziVoiceTests/Pods-HanziVoiceTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		130A5DAC2B1E53E4C6089866 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HanziVoice/Pods-HanziVoice-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		13A49BDAF7BCD4C269637BC4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		15BA9BD9F6360FEE3D440399 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HanziVoiceUITests/Pods-HanziVoiceUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		47707E83E6B258DA95DC8A79 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HanziVoice/Pods-HanziVoice-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5DC331813988B3797E61A1C8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		76B185BFCC3B5F0883A9D34C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C5F5F5D6CE7C60817AC027D2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HanziVoiceTests/Pods-HanziVoiceTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D716C542CF836873348D007E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HanziVoiceUITests/Pods-HanziVoiceUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1A389C1F1F283D1500875A80 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -264,6 +524,11 @@
 			files = (
 				1A389C291F283D1500875A80 /* ViewController.swift in Sources */,
 				1A389C271F283D1500875A80 /* AppDelegate.swift in Sources */,
+				1A9060B31F2DC8130056A825 /* MCPVoiceView.swift in Sources */,
+				1A9060B51F2DE7B30056A825 /* Orthography.swift in Sources */,
+				1A9060AF1F2DB9910056A825 /* MCPCharTableViewCell.swift in Sources */,
+				1A9060CC1F2DFA140056A825 /* String+Utils.swift in Sources */,
+				1A7B5BAB1F2C817C00E5098E /* DBReader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +678,7 @@
 		};
 		1A389C4C1F283D1600875A80 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9AAEC7028B350968B004D72 /* Pods-HanziVoice.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = DFKA9888HD;
@@ -420,12 +686,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xplorld.HanziVoice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HanziVoice/bridging-header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		1A389C4D1F283D1600875A80 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9315A83F976811356578C6E6 /* Pods-HanziVoice.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = DFKA9888HD;
@@ -433,12 +701,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xplorld.HanziVoice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HanziVoice/bridging-header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		1A389C4F1F283D1600875A80 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B59F5059DF57C7DFAD795097 /* Pods-HanziVoiceTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -454,6 +724,7 @@
 		};
 		1A389C501F283D1600875A80 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8014460AAD415B3A60726D14 /* Pods-HanziVoiceTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -469,6 +740,7 @@
 		};
 		1A389C521F283D1600875A80 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04C3D295C07A17851AD00D07 /* Pods-HanziVoiceUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = DFKA9888HD;
@@ -483,6 +755,7 @@
 		};
 		1A389C531F283D1600875A80 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA6508DAB5FA17B9A63313F8 /* Pods-HanziVoiceUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = DFKA9888HD;
@@ -514,6 +787,7 @@
 				1A389C4D1F283D1600875A80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1A389C4E1F283D1600875A80 /* Build configuration list for PBXNativeTarget "HanziVoiceTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +796,7 @@
 				1A389C501F283D1600875A80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1A389C511F283D1600875A80 /* Build configuration list for PBXNativeTarget "HanziVoiceUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +805,7 @@
 				1A389C531F283D1600875A80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
