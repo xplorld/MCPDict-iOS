@@ -68,13 +68,15 @@ import UIKit
         self.bottomAnchor.constraint(greaterThanOrEqualTo: imageView.bottomAnchor).isActive = true
         imageView.contentMode = .scaleAspectFit
         imageView.heightAnchor.constraint(equalToConstant: 20) //magic...
-        imageView.setContentHuggingPriority(UILayoutPriorityDefaultHigh, for: UILayoutConstraintAxis.horizontal)
+        //cannot be wider than intrinstic
+        imageView.setContentHuggingPriority(UILayoutPriorityRequired, for: .horizontal)
         
         self.topAnchor.constraint(equalTo: textLabel.topAnchor).isActive = true
         self.bottomAnchor.constraint(equalTo: textLabel.bottomAnchor).isActive = true
         textLabel.leadingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: 8).isActive = true
         textLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
-        textLabel.setContentCompressionResistancePriority(UILayoutPriorityDefaultHigh, for: UILayoutConstraintAxis.vertical)
+        textLabel.setContentCompressionResistancePriority(UILayoutPriorityDefaultLow, for: .horizontal)
+        textLabel.setContentCompressionResistancePriority(UILayoutPriorityDefaultHigh, for: .vertical)
         
         textLabel.numberOfLines = 0
         textLabel.textAlignment = .natural

@@ -14,6 +14,8 @@
 		1A389C311F283D1500875A80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A389C2F1F283D1500875A80 /* LaunchScreen.storyboard */; };
 		1A389C3C1F283D1600875A80 /* HanziVoiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A389C3B1F283D1600875A80 /* HanziVoiceTests.swift */; };
 		1A389C471F283D1600875A80 /* HanziVoiceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A389C461F283D1600875A80 /* HanziVoiceUITests.swift */; };
+		1A4F2AB11F9B8C5B00697B97 /* MCPSearchOptionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4F2AB01F9B8C5B00697B97 /* MCPSearchOptionsTableViewController.swift */; };
+		1A4F2AB31F9B9DAA00697B97 /* MCPSearchOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4F2AB21F9B9DAA00697B97 /* MCPSearchOptions.swift */; };
 		1A7B5BA71F2C815600E5098E /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A7B5BA61F2C815600E5098E /* libsqlite3.0.tbd */; };
 		1A7B5BA91F2C816B00E5098E /* mcpdict.db in Resources */ = {isa = PBXBuildFile; fileRef = 1A7B5BA81F2C816B00E5098E /* mcpdict.db */; };
 		1A7B5BAB1F2C817C00E5098E /* DBReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7B5BAA1F2C817C00E5098E /* DBReader.swift */; };
@@ -30,7 +32,7 @@
 		1A9060C71F2DEADB0056A825 /* orthography_pu_bopomofo.tsv in Resources */ = {isa = PBXBuildFile; fileRef = 1A9060BD1F2DEADB0056A825 /* orthography_pu_bopomofo.tsv */; };
 		1A9060C81F2DEADB0056A825 /* orthography_pu_pinyin.tsv in Resources */ = {isa = PBXBuildFile; fileRef = 1A9060BE1F2DEADB0056A825 /* orthography_pu_pinyin.tsv */; };
 		1A9060C91F2DEADB0056A825 /* orthography_vn.tsv in Resources */ = {isa = PBXBuildFile; fileRef = 1A9060BF1F2DEADB0056A825 /* orthography_vn.tsv */; };
-		1A9060CC1F2DFA140056A825 /* String+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9060CB1F2DFA140056A825 /* String+Utils.swift */; };
+		1A9060CC1F2DFA140056A825 /* Swift+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9060CB1F2DFA140056A825 /* Swift+Utils.swift */; };
 		3A875BB19C4F7C1A82F74DB1 /* Pods_HanziVoiceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2284B0C92198D4C0F6CC96C0 /* Pods_HanziVoiceTests.framework */; };
 		ADAA7AA17F17B81DC1D80F8C /* Pods_HanziVoiceUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2090F349FBAE346DAAF32277 /* Pods_HanziVoiceUITests.framework */; };
 		F9E2E0AF7D5CC0F14E6AB991 /* Pods_HanziVoice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ECE1CBF688772E909FC63E9 /* Pods_HanziVoice.framework */; };
@@ -68,6 +70,8 @@
 		1A389C421F283D1600875A80 /* HanziVoiceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HanziVoiceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A389C461F283D1600875A80 /* HanziVoiceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HanziVoiceUITests.swift; sourceTree = "<group>"; };
 		1A389C481F283D1600875A80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A4F2AB01F9B8C5B00697B97 /* MCPSearchOptionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCPSearchOptionsTableViewController.swift; sourceTree = "<group>"; };
+		1A4F2AB21F9B9DAA00697B97 /* MCPSearchOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCPSearchOptions.swift; sourceTree = "<group>"; };
 		1A7B5BA61F2C815600E5098E /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		1A7B5BA81F2C816B00E5098E /* mcpdict.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = mcpdict.db; path = HanziVoice/mcpdict.db; sourceTree = SOURCE_ROOT; };
 		1A7B5BAA1F2C817C00E5098E /* DBReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBReader.swift; sourceTree = "<group>"; };
@@ -85,7 +89,7 @@
 		1A9060BD1F2DEADB0056A825 /* orthography_pu_bopomofo.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = orthography_pu_bopomofo.tsv; sourceTree = "<group>"; };
 		1A9060BE1F2DEADB0056A825 /* orthography_pu_pinyin.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = orthography_pu_pinyin.tsv; sourceTree = "<group>"; };
 		1A9060BF1F2DEADB0056A825 /* orthography_vn.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = orthography_vn.tsv; sourceTree = "<group>"; };
-		1A9060CB1F2DFA140056A825 /* String+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Utils.swift"; sourceTree = "<group>"; };
+		1A9060CB1F2DFA140056A825 /* Swift+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Swift+Utils.swift"; sourceTree = "<group>"; };
 		2090F349FBAE346DAAF32277 /* Pods_HanziVoiceUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HanziVoiceUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2284B0C92198D4C0F6CC96C0 /* Pods_HanziVoiceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HanziVoiceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8014460AAD415B3A60726D14 /* Pods-HanziVoiceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HanziVoiceTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HanziVoiceTests/Pods-HanziVoiceTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -128,6 +132,7 @@
 		1A389C1A1F283D1500875A80 = {
 			isa = PBXGroup;
 			children = (
+				1A4F2AB21F9B9DAA00697B97 /* MCPSearchOptions.swift */,
 				1A389C251F283D1500875A80 /* HanziVoice */,
 				1A389C3A1F283D1600875A80 /* HanziVoiceTests */,
 				1A389C451F283D1600875A80 /* HanziVoiceUITests */,
@@ -155,9 +160,10 @@
 				1A389C261F283D1500875A80 /* AppDelegate.swift */,
 				1A389C281F283D1500875A80 /* ViewController.swift */,
 				1A389C2A1F283D1500875A80 /* Main.storyboard */,
+				1A4F2AB01F9B8C5B00697B97 /* MCPSearchOptionsTableViewController.swift */,
 				1A9060AE1F2DB9910056A825 /* MCPCharTableViewCell.swift */,
 				1A9060B41F2DE7B30056A825 /* Orthography.swift */,
-				1A9060CB1F2DFA140056A825 /* String+Utils.swift */,
+				1A9060CB1F2DFA140056A825 /* Swift+Utils.swift */,
 				1A389C2D1F283D1500875A80 /* Assets.xcassets */,
 				1A389C2F1F283D1500875A80 /* LaunchScreen.storyboard */,
 				1A389C321F283D1500875A80 /* Info.plist */,
@@ -523,11 +529,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A389C291F283D1500875A80 /* ViewController.swift in Sources */,
+				1A4F2AB31F9B9DAA00697B97 /* MCPSearchOptions.swift in Sources */,
 				1A389C271F283D1500875A80 /* AppDelegate.swift in Sources */,
 				1A9060B31F2DC8130056A825 /* MCPVoiceView.swift in Sources */,
 				1A9060B51F2DE7B30056A825 /* Orthography.swift in Sources */,
 				1A9060AF1F2DB9910056A825 /* MCPCharTableViewCell.swift in Sources */,
-				1A9060CC1F2DFA140056A825 /* String+Utils.swift in Sources */,
+				1A4F2AB11F9B8C5B00697B97 /* MCPSearchOptionsTableViewController.swift in Sources */,
+				1A9060CC1F2DFA140056A825 /* Swift+Utils.swift in Sources */,
 				1A7B5BAB1F2C817C00E5098E /* DBReader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

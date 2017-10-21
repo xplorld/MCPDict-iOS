@@ -9,15 +9,52 @@
 import UIKit
 
 class ViewController: UIViewController {
+    let SEARCH_DETAIL_VIEW_ANIMATION_DURATION:TimeInterval = 0.5
+    
+    @IBAction func searchButtonTapped(_ sender: Any) {
+        SetSearchDetailView(active: true)
+    }
+    @IBOutlet weak var searchDetailView: UIView!
+    weak var searchOptionsViewController : MCPSearchOptionsTableViewController! {
+        didSet {
+            searchOptionsViewController?.delegate = self
+        }
+    }
+    
+    func SetSearchDetailView(active:Bool)
+    {
+        if (active == !searchDetailView.isHidden) {
+            return
+        }
+        //if `active` mismatches hidden status, 
+        //perform action and set first responder to search view 
+        //(who sets first responder to search bar)
+        if active == false {
+            
+            UIView.transition(with: searchDetailView,
+                              duration: SEARCH_DETAIL_VIEW_ANIMATION_DURATION,
+                              options: .transitionCrossDissolve ,
+                              animations: {
+                                [weak self] in
+                                let _ = self?.searchOptionsViewController.resignFirstResponder()
+                                self?.searchDetailView.isHidden = true
+                                },
+                              completion: nil)
+        } else {
+            UIView.transition(with: searchDetailView,
+                              duration: SEARCH_DETAIL_VIEW_ANIMATION_DURATION,
+                              options: .transitionCrossDissolve,
+                              animations: {
+                                [weak self] in
+                                self?.searchDetailView.isHidden = false
+                                let _ = self?.searchOptionsViewController.becomeFirstResponder()
+                                },
+                              completion: nil)
 
-    @IBOutlet weak var searchBar: UISearchBar!
-    
-    @IBOutlet weak var queryMode: UIButton!
-    
-    @IBOutlet weak var searchInKuangxYonhOnly: UISwitch!
-    @IBOutlet weak var allowVariants: UISwitch!
-    @IBOutlet weak var toneInsensitive: UISwitch!
-    
+        }
+        
+    }
+
     @IBOutlet weak var tableView: UITableView!
     
     
@@ -30,11 +67,18 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.automaticallyAdjustsScrollViewInsets = false
-        searchBar.delegate = self
         tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 135
+    
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if chars.isEmpty {
+            SetSearchDetailView(active: true)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -42,15 +86,20 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "MainToSearchOptionsSegue") {
+            searchOptionsViewController = segue.destination as! MCPSearchOptionsTableViewController
+        }
+    }
 
 }
 
 
-extension ViewController : UISearchBarDelegate {
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        let text = searchBar.text ?? ""
-        self.chars = db.search(text)
-        
+extension ViewController : MCPSearchOptionsTableViewControllerDelegate {
+    
+    func beginSearch(text: String, options: MCPSearchOptions) {
+        self.chars = db.search(keyword: text, options: options)
+        SetSearchDetailView(active: false)
     }
 }
 
@@ -67,5 +116,9 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
         let char = self.chars[indexPath.row]
         cell.model = char
         return cell
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        SetSearchDetailView(active: false)
     }
 }

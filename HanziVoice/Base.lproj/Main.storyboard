@@ -22,86 +22,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ghy-QR-ctK">
-                                <rect key="frame" x="0.0" y="64" width="375" height="239"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="AcP-vb-6xa">
-                                        <rect key="frame" x="8" y="8" width="359" height="223"/>
-                                        <subviews>
-                                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="输入待检索汉字" translatesAutoresizingMaskIntoConstraints="NO" id="7kg-vT-xB9">
-                                                <rect key="frame" x="0.0" y="0.0" width="359" height="44"/>
-                                                <textInputTraits key="textInputTraits" returnKeyType="search" enablesReturnKeyAutomatically="YES"/>
-                                            </searchBar>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="VqC-fN-X7O">
-                                                <rect key="frame" x="0.0" y="58" width="359" height="30"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="查詢模式" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dA5-C5-XNo">
-                                                        <rect key="frame" x="0.0" y="0.0" width="69.5" height="30"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z1q-Mh-6La">
-                                                        <rect key="frame" x="328" y="0.0" width="31" height="30"/>
-                                                        <state key="normal" title="漢字"/>
-                                                    </button>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="OH8-Nx-Enb">
-                                                <rect key="frame" x="0.0" y="102" width="359" height="31"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="僅在《廣韻》內查找" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCt-R9-fBh">
-                                                        <rect key="frame" x="0.0" y="0.0" width="302" height="31"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rO5-yd-3ME">
-                                                        <rect key="frame" x="310" y="0.0" width="51" height="31"/>
-                                                    </switch>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="HMJ-62-KxI">
-                                                <rect key="frame" x="0.0" y="147" width="359" height="31"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="簡繁、異體轉換" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4TD-dG-pCM">
-                                                        <rect key="frame" x="0.0" y="0.0" width="302" height="31"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gMP-sm-x4s">
-                                                        <rect key="frame" x="310" y="0.0" width="51" height="31"/>
-                                                    </switch>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0Vx-5u-blG">
-                                                <rect key="frame" x="0.0" y="192" width="359" height="31"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="聲調不敏感" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XfE-Ky-aII">
-                                                        <rect key="frame" x="0.0" y="0.0" width="302" height="31"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uvP-u5-9ud">
-                                                        <rect key="frame" x="310" y="0.0" width="51" height="31"/>
-                                                    </switch>
-                                                </subviews>
-                                            </stackView>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="AcP-vb-6xa" secondAttribute="bottom" constant="8" id="3nd-wi-vgz"/>
-                                    <constraint firstAttribute="leadingMargin" secondItem="AcP-vb-6xa" secondAttribute="leading" id="A7i-8P-PpI"/>
-                                    <constraint firstItem="AcP-vb-6xa" firstAttribute="top" secondItem="Ghy-QR-ctK" secondAttribute="top" constant="8" id="dyw-qu-JYy"/>
-                                    <constraint firstAttribute="trailingMargin" secondItem="AcP-vb-6xa" secondAttribute="trailing" id="fQd-IG-ATY"/>
-                                </constraints>
-                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="xNP-i4-HMf">
-                                <rect key="frame" x="0.0" y="303" width="375" height="364"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MCPCharTableViewCell" rowHeight="160" id="xiH-BA-jpK" customClass="MCPCharTableViewCell" customModule="HanziVoice" customModuleProvider="target">
@@ -112,7 +34,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="253" verticalHuggingPriority="251" text="一" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Is-60-8Gl">
-                                                    <rect key="frame" x="8" y="16" width="63.5" height="60"/>
+                                                    <rect key="frame" x="8" y="16" width="64" height="60"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                     <color key="textColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -124,10 +46,10 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="240" verticalHuggingPriority="239" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Fpc-kq-XrH">
-                                                    <rect key="frame" x="79.5" y="8" width="287.5" height="143.5"/>
+                                                    <rect key="frame" x="80" y="8" width="287" height="143"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="leM-aZ-ohc" customClass="MCPVoiceView" customModule="HanziVoice" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="287.5" height="0.0"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="287" height="0.0"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="image" keyPath="image" value="lang_mc"/>
@@ -135,10 +57,10 @@
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
                                                         <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="2oJ-vZ-2cm">
-                                                            <rect key="frame" x="0.0" y="8" width="287.5" height="50"/>
+                                                            <rect key="frame" x="0.0" y="8" width="287" height="49.5"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z8Y-so-HcR" customClass="MCPVoiceView" customModule="HanziVoice" customModuleProvider="target">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="144" height="50"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="143.5" height="49.5"/>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <userDefinedRuntimeAttributes>
                                                                         <userDefinedRuntimeAttribute type="image" keyPath="image" value="lang_pu"/>
@@ -146,7 +68,7 @@
                                                                     </userDefinedRuntimeAttributes>
                                                                 </view>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UUE-5t-NuK" customClass="MCPVoiceView" customModule="HanziVoice" customModuleProvider="target">
-                                                                    <rect key="frame" x="144" y="0.0" width="143.5" height="50"/>
+                                                                    <rect key="frame" x="143.5" y="0.0" width="143.5" height="49.5"/>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <userDefinedRuntimeAttributes>
                                                                         <userDefinedRuntimeAttribute type="image" keyPath="image" value="lang_ct"/>
@@ -156,10 +78,10 @@
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="kz5-7X-VIb">
-                                                            <rect key="frame" x="0.0" y="66" width="287.5" height="20.5"/>
+                                                            <rect key="frame" x="0.0" y="65.5" width="287" height="20.5"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2JL-dZ-AGV" customClass="MCPVoiceView" customModule="HanziVoice" customModuleProvider="target">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="144" height="20.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="143.5" height="20.5"/>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <userDefinedRuntimeAttributes>
                                                                         <userDefinedRuntimeAttribute type="image" keyPath="image" value="lang_sh"/>
@@ -167,7 +89,7 @@
                                                                     </userDefinedRuntimeAttributes>
                                                                 </view>
                                                                 <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e2K-vU-tng" customClass="MCPVoiceView" customModule="HanziVoice" customModuleProvider="target">
-                                                                    <rect key="frame" x="144" y="0.0" width="143.5" height="20.5"/>
+                                                                    <rect key="frame" x="143.5" y="0.0" width="143.5" height="20.5"/>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <userDefinedRuntimeAttributes>
                                                                         <userDefinedRuntimeAttribute type="image" keyPath="image" value="lang_mn"/>
@@ -177,10 +99,10 @@
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="6z2-tg-cUq">
-                                                            <rect key="frame" x="0.0" y="94.5" width="287.5" height="20.5"/>
+                                                            <rect key="frame" x="0.0" y="94" width="287" height="20.5"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nUA-4r-8Pw" customClass="MCPVoiceView" customModule="HanziVoice" customModuleProvider="target">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="144" height="20.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="143.5" height="20.5"/>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <userDefinedRuntimeAttributes>
                                                                         <userDefinedRuntimeAttribute type="image" keyPath="image" value="lang_kr"/>
@@ -188,7 +110,7 @@
                                                                     </userDefinedRuntimeAttributes>
                                                                 </view>
                                                                 <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ut4-0Z-RXA" customClass="MCPVoiceView" customModule="HanziVoice" customModuleProvider="target">
-                                                                    <rect key="frame" x="144" y="0.0" width="143.5" height="20.5"/>
+                                                                    <rect key="frame" x="143.5" y="0.0" width="143.5" height="20.5"/>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <userDefinedRuntimeAttributes>
                                                                         <userDefinedRuntimeAttribute type="image" keyPath="image" value="lang_vn"/>
@@ -198,10 +120,10 @@
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="wOk-C5-U6c">
-                                                            <rect key="frame" x="0.0" y="123" width="287.5" height="20.5"/>
+                                                            <rect key="frame" x="0.0" y="122.5" width="287" height="20.5"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mwu-ki-i7S" customClass="MCPVoiceView" customModule="HanziVoice" customModuleProvider="target">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="144" height="20.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="143.5" height="20.5"/>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <userDefinedRuntimeAttributes>
                                                                         <userDefinedRuntimeAttribute type="image" keyPath="image" value="lang_jp_go"/>
@@ -209,7 +131,7 @@
                                                                     </userDefinedRuntimeAttributes>
                                                                 </view>
                                                                 <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="upI-fz-2Mo" customClass="MCPVoiceView" customModule="HanziVoice" customModuleProvider="target">
-                                                                    <rect key="frame" x="144" y="0.0" width="143.5" height="20.5"/>
+                                                                    <rect key="frame" x="143.5" y="0.0" width="143.5" height="20.5"/>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <userDefinedRuntimeAttributes>
                                                                         <userDefinedRuntimeAttribute type="image" keyPath="image" value="lang_jp_kan"/>
@@ -249,23 +171,51 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ghy-QR-ctK">
+                                <rect key="frame" x="0.0" y="64" width="375" height="220"/>
+                                <subviews>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8mk-mC-PAH">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="220"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="220" id="45T-WM-2if"/>
+                                        </constraints>
+                                        <connections>
+                                            <segue destination="bwq-be-7Pa" kind="embed" identifier="MainToSearchOptionsSegue" id="HT4-EJ-iis"/>
+                                        </connections>
+                                    </containerView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="8mk-mC-PAH" secondAttribute="bottom" id="Oxd-1m-MZp"/>
+                                    <constraint firstItem="8mk-mC-PAH" firstAttribute="top" secondItem="Ghy-QR-ctK" secondAttribute="top" id="l3p-Rh-1mj"/>
+                                    <constraint firstItem="8mk-mC-PAH" firstAttribute="leading" secondItem="Ghy-QR-ctK" secondAttribute="leading" id="rDn-DR-NcX"/>
+                                    <constraint firstAttribute="trailing" secondItem="8mk-mC-PAH" secondAttribute="trailing" id="wGc-uI-Tek"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="xNP-i4-HMf" firstAttribute="leading" secondItem="Ghy-QR-ctK" secondAttribute="leading" id="340-Cx-0Sf"/>
+                            <constraint firstItem="xNP-i4-HMf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Oq4-wg-jSB"/>
                             <constraint firstItem="xNP-i4-HMf" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="UiL-K3-e1H"/>
+                            <constraint firstAttribute="trailing" secondItem="xNP-i4-HMf" secondAttribute="trailing" id="YLE-cF-0tK"/>
                             <constraint firstItem="Ghy-QR-ctK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="a48-nM-xTc"/>
                             <constraint firstAttribute="trailing" secondItem="Ghy-QR-ctK" secondAttribute="trailing" id="ayS-1P-RWN"/>
-                            <constraint firstItem="xNP-i4-HMf" firstAttribute="top" secondItem="Ghy-QR-ctK" secondAttribute="bottom" id="eJN-9H-WaI"/>
+                            <constraint firstItem="xNP-i4-HMf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hKC-1C-0Hd"/>
                             <constraint firstItem="Ghy-QR-ctK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="qGk-h1-yrB"/>
-                            <constraint firstItem="xNP-i4-HMf" firstAttribute="trailing" secondItem="Ghy-QR-ctK" secondAttribute="trailing" id="zc8-oe-0Hg"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="汉字检索" id="HqL-7b-XnV"/>
+                    <navigationItem key="navigationItem" title="汉字检索" id="HqL-7b-XnV">
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="dC0-ly-jdH">
+                            <connections>
+                                <action selector="searchButtonTapped:" destination="BYZ-38-t0r" id="ySS-nn-yFe"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="allowVariants" destination="gMP-sm-x4s" id="4nQ-ZZ-YJo"/>
                         <outlet property="queryMode" destination="z1q-Mh-6La" id="Wto-2G-rH2"/>
                         <outlet property="searchBar" destination="7kg-vT-xB9" id="LjN-g6-6We"/>
+                        <outlet property="searchDetailView" destination="Ghy-QR-ctK" id="Itk-JQ-N9x"/>
                         <outlet property="searchInKuangxYonhOnly" destination="rO5-yd-3ME" id="HmY-Zy-BAc"/>
                         <outlet property="tableView" destination="xNP-i4-HMf" id="gCl-fF-ndK"/>
                         <outlet property="toneInsensitive" destination="uvP-u5-9ud" id="fn1-Wp-1AF"/>
@@ -274,6 +224,164 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1079.2" y="138.98050974512745"/>
+        </scene>
+        <!--Search Options Table View Controller-->
+        <scene sceneID="k81-VY-1jM">
+            <objects>
+                <tableViewController id="bwq-be-7Pa" customClass="MCPSearchOptionsTableViewController" customModule="HanziVoice" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="swa-xx-bQd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="220"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection id="cR7-c9-1zq">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="44" id="Vwp-Fs-83E">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vwp-Fs-83E" id="UAy-ES-bRM">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="输入待检索汉字" translatesAutoresizingMaskIntoConstraints="NO" id="7kg-vT-xB9">
+                                                    <rect key="frame" x="0.0" y="-1" width="375" height="44"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="search" enablesReturnKeyAutomatically="YES"/>
+                                                </searchBar>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="7kg-vT-xB9" secondAttribute="bottom" id="Kkz-0A-dFn"/>
+                                                <constraint firstAttribute="trailing" secondItem="7kg-vT-xB9" secondAttribute="trailing" id="M38-ue-D94"/>
+                                                <constraint firstItem="7kg-vT-xB9" firstAttribute="leading" secondItem="UAy-ES-bRM" secondAttribute="leading" id="PgX-V9-dtC"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="44" id="NAK-eB-O1M">
+                                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NAK-eB-O1M" id="IlR-XC-pVV">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z1q-Mh-6La">
+                                                    <rect key="frame" x="336" y="6" width="31" height="30"/>
+                                                    <state key="normal" title="漢字"/>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="查詢模式" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dA5-C5-XNo">
+                                                    <rect key="frame" x="8" y="6" width="70" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="dA5-C5-XNo" firstAttribute="top" secondItem="z1q-Mh-6La" secondAttribute="top" id="AeG-QW-iTK"/>
+                                                <constraint firstItem="dA5-C5-XNo" firstAttribute="centerY" secondItem="IlR-XC-pVV" secondAttribute="centerY" id="DEU-Kx-fA9"/>
+                                                <constraint firstItem="z1q-Mh-6La" firstAttribute="trailing" secondItem="IlR-XC-pVV" secondAttribute="trailingMargin" id="G5D-Bw-SEq"/>
+                                                <constraint firstItem="dA5-C5-XNo" firstAttribute="bottom" secondItem="z1q-Mh-6La" secondAttribute="bottom" id="P4A-hM-GdW"/>
+                                                <constraint firstItem="dA5-C5-XNo" firstAttribute="leading" secondItem="IlR-XC-pVV" secondAttribute="leadingMargin" id="s3a-Wz-SJf"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="44" id="57T-nc-40e">
+                                        <rect key="frame" x="0.0" y="88" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="57T-nc-40e" id="Eot-8g-Ycb">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rO5-yd-3ME">
+                                                    <rect key="frame" x="318" y="6" width="51" height="31"/>
+                                                </switch>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="僅在《廣韻》內查找" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCt-R9-fBh">
+                                                    <rect key="frame" x="8" y="6" width="302" height="31"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="CCt-R9-fBh" firstAttribute="bottom" secondItem="rO5-yd-3ME" secondAttribute="bottom" id="GlZ-Bw-x9k"/>
+                                                <constraint firstItem="CCt-R9-fBh" firstAttribute="top" secondItem="rO5-yd-3ME" secondAttribute="top" id="VH3-vn-Aw0"/>
+                                                <constraint firstItem="CCt-R9-fBh" firstAttribute="leading" secondItem="Eot-8g-Ycb" secondAttribute="leadingMargin" id="VSP-fB-aK3"/>
+                                                <constraint firstItem="rO5-yd-3ME" firstAttribute="leading" secondItem="CCt-R9-fBh" secondAttribute="trailing" constant="8" symbolic="YES" id="i5T-bJ-jos"/>
+                                                <constraint firstItem="rO5-yd-3ME" firstAttribute="trailing" secondItem="Eot-8g-Ycb" secondAttribute="trailingMargin" id="mZO-sK-IiG"/>
+                                                <constraint firstItem="CCt-R9-fBh" firstAttribute="centerY" secondItem="Eot-8g-Ycb" secondAttribute="centerY" id="nh7-mL-aL0"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="44" id="fX7-wF-eOD">
+                                        <rect key="frame" x="0.0" y="132" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fX7-wF-eOD" id="qbB-7b-Jae">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gMP-sm-x4s">
+                                                    <rect key="frame" x="318" y="6" width="51" height="31"/>
+                                                </switch>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="簡繁、異體轉換" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4TD-dG-pCM">
+                                                    <rect key="frame" x="8" y="6" width="302" height="31"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="4TD-dG-pCM" firstAttribute="centerY" secondItem="qbB-7b-Jae" secondAttribute="centerY" id="Cfr-Df-3zd"/>
+                                                <constraint firstItem="4TD-dG-pCM" firstAttribute="top" secondItem="gMP-sm-x4s" secondAttribute="top" id="Ixr-MR-txr"/>
+                                                <constraint firstItem="4TD-dG-pCM" firstAttribute="bottom" secondItem="gMP-sm-x4s" secondAttribute="bottom" id="TBA-8m-gIK"/>
+                                                <constraint firstItem="gMP-sm-x4s" firstAttribute="leading" secondItem="4TD-dG-pCM" secondAttribute="trailing" constant="8" symbolic="YES" id="Vaa-jg-3D6"/>
+                                                <constraint firstItem="4TD-dG-pCM" firstAttribute="leading" secondItem="qbB-7b-Jae" secondAttribute="leadingMargin" id="bsh-Pz-mMz"/>
+                                                <constraint firstItem="gMP-sm-x4s" firstAttribute="trailing" secondItem="qbB-7b-Jae" secondAttribute="trailingMargin" id="vIH-uB-VQk"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="44" id="5Qd-38-AAF">
+                                        <rect key="frame" x="0.0" y="176" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5Qd-38-AAF" id="QWS-3P-rTD">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="聲調不敏感" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XfE-Ky-aII">
+                                                    <rect key="frame" x="8" y="6" width="302" height="31"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uvP-u5-9ud">
+                                                    <rect key="frame" x="318" y="6" width="51" height="31"/>
+                                                </switch>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="uvP-u5-9ud" firstAttribute="trailing" secondItem="QWS-3P-rTD" secondAttribute="trailingMargin" id="OPM-Fm-0tW"/>
+                                                <constraint firstItem="XfE-Ky-aII" firstAttribute="centerY" secondItem="QWS-3P-rTD" secondAttribute="centerY" id="TjG-fj-Fp7"/>
+                                                <constraint firstItem="uvP-u5-9ud" firstAttribute="leading" secondItem="XfE-Ky-aII" secondAttribute="trailing" constant="8" symbolic="YES" id="WJq-L8-Y1y"/>
+                                                <constraint firstItem="XfE-Ky-aII" firstAttribute="leading" secondItem="QWS-3P-rTD" secondAttribute="leadingMargin" id="hZ0-La-XyC"/>
+                                                <constraint firstItem="XfE-Ky-aII" firstAttribute="bottom" secondItem="uvP-u5-9ud" secondAttribute="bottom" id="tZx-4J-uyQ"/>
+                                                <constraint firstItem="XfE-Ky-aII" firstAttribute="top" secondItem="uvP-u5-9ud" secondAttribute="top" id="zBk-Q2-bzJ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="bwq-be-7Pa" id="B3V-9s-UGI"/>
+                            <outlet property="delegate" destination="bwq-be-7Pa" id="31l-k9-nFp"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="allowVariants" destination="gMP-sm-x4s" id="r3b-SD-Hj4"/>
+                        <outlet property="queryModeButton" destination="z1q-Mh-6La" id="zdO-jh-Rto"/>
+                        <outlet property="searchBar" destination="7kg-vT-xB9" id="AqQ-AV-Gng"/>
+                        <outlet property="searchInKuangxYonhOnly" destination="rO5-yd-3ME" id="Efx-iG-286"/>
+                        <outlet property="toneInsensitive" destination="uvP-u5-9ud" id="6i2-eZ-lFC"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YgM-4L-EHG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1905" y="58"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3FE-U0-7OY">
