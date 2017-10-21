@@ -8,7 +8,33 @@
 
 import UIKit
 
+protocol OrthographyImpl {
+    associatedtype DisplayType
+    func convert(_ string:String, to: DisplayType) -> String
+    func display(_ s:String, as type: DisplayType) -> String
+}
+
 class Orthography {
+    static let Unicode = UnicodeImpl()
+    class UnicodeImpl {
+        let firstHanzi = UInt32(0x4E00)
+        let lastHanzi  = UInt32(0x9FA5)
+        let variantsDict:[UInt32:[UInt32]]
+        
+        func isHanzi(codepoint: UInt32) -> Bool {
+            return codepoint >= firstHanzi && codepoint <= lastHanzi
+        }
+        
+        func getVariants(codepoint: UInt32) -> [UInt32] {
+            return variantsDict[codepoint] ?? [codepoint]
+        }
+        
+        fileprivate init() {
+            variantsDict = Orthography.readVariants(filename: "orthography_hz_variants")
+        }
+        
+    }
+    
     static let MiddleChinese = MiddleChineseImpl()
     class MiddleChineseImpl {
         var mapInitials:[String:String] = [:] //声母
@@ -17,7 +43,6 @@ class Orthography {
         var mapHo:[String:String] = [:]
         var mapSjep:[String:String] = [:]
         var mapBiengSjyix:[String:String] = [:] //平水
-        
         
         fileprivate init() {
             //initials
@@ -252,11 +277,11 @@ class Orthography {
         do {
             
             let path = Bundle.main.path(forResource: filename, ofType: type)!
-            let tsv = try String(contentsOfFile: path)
+            let text = try String(contentsOfFile: path)
             
             var csvs:[[String]] = []
             
-            let lines = tsv.components(separatedBy: CharacterSet.newlines)
+            let lines = text.components(separatedBy: CharacterSet.newlines)
             for line in lines {
                 if line.isEmpty || line[line.startIndex] == "#" {
                     continue
@@ -266,11 +291,32 @@ class Orthography {
             }
             return csvs
         } catch {
-            print("exception on reading from tsv file!")
-            return []
+            fatalError("exception on reading from tsv file!")
         }
-        
     }
     
+    static func readVariants(
+        filename:String,
+        ofType type:String = "txt") -> [UInt32: [UInt32]] {
+        do {
+            let path = Bundle.main.path(forResource: filename, ofType: type)!
+            let text = try String(contentsOfFile: path)
+            
+            var dict:[UInt32: [UInt32]] = [:]
+            
+            let lines = text.components(separatedBy: CharacterSet.newlines)
+            for line in lines {
+                let codepoints = line
+                    .unicodeScalars
+                    .map { return $0.value }
+                for codepoint in codepoints {
+                    dict[codepoint] = codepoints
+                }
+            }
+            return dict
+        } catch {
+            fatalError("exception on reading from tsv file!")
+        }
+    }
     
 }

@@ -71,7 +71,7 @@
 		1A389C461F283D1600875A80 /* HanziVoiceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HanziVoiceUITests.swift; sourceTree = "<group>"; };
 		1A389C481F283D1600875A80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A4F2AB01F9B8C5B00697B97 /* MCPSearchOptionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCPSearchOptionsTableViewController.swift; sourceTree = "<group>"; };
-		1A4F2AB21F9B9DAA00697B97 /* MCPSearchOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCPSearchOptions.swift; sourceTree = "<group>"; };
+		1A4F2AB21F9B9DAA00697B97 /* MCPSearchOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MCPSearchOptions.swift; path = ../MCPSearchOptions.swift; sourceTree = "<group>"; };
 		1A7B5BA61F2C815600E5098E /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		1A7B5BA81F2C816B00E5098E /* mcpdict.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = mcpdict.db; path = HanziVoice/mcpdict.db; sourceTree = SOURCE_ROOT; };
 		1A7B5BAA1F2C817C00E5098E /* DBReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBReader.swift; sourceTree = "<group>"; };
@@ -132,7 +132,6 @@
 		1A389C1A1F283D1500875A80 = {
 			isa = PBXGroup;
 			children = (
-				1A4F2AB21F9B9DAA00697B97 /* MCPSearchOptions.swift */,
 				1A389C251F283D1500875A80 /* HanziVoice */,
 				1A389C3A1F283D1600875A80 /* HanziVoiceTests */,
 				1A389C451F283D1600875A80 /* HanziVoiceUITests */,
@@ -155,6 +154,7 @@
 		1A389C251F283D1500875A80 /* HanziVoice */ = {
 			isa = PBXGroup;
 			children = (
+				1A4F2AB21F9B9DAA00697B97 /* MCPSearchOptions.swift */,
 				1A9060B21F2DC8130056A825 /* MCPVoiceView.swift */,
 				1A9060CA1F2DEAE10056A825 /* resources */,
 				1A389C261F283D1500875A80 /* AppDelegate.swift */,

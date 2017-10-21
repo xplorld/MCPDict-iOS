@@ -28,9 +28,32 @@ enum MCPDictItemColumn : String {
         return Expression<String?>(self.rawValue)
     }
     
+    var displayName : String {
+        return [
+            .unicode: "汉字",
+            .middleChinese: "广韵中古音",
+            .mandrin: "普通话拼音",
+            .cantonese: "广东话拼音",
+            .wu: "吴语音",
+            .min: "闽语音",
+            .korean: "韩文",
+            .vietnamese: "越南文",
+            .jp_go: "日语吴音",
+            .jp_kan: "日语汉音",
+            .jp_tou: "日语唐音",
+            .jp_kwan: "日语惯用音",
+            .jp_other: "日语其他音",
+        ][self]!
+    }
+    
+    static func queryTypes() -> [MCPDictItemColumn] {
+        return [.unicode, .middleChinese,.mandrin,.cantonese,.wu,.min,.korean,.vietnamese,.jp_go,.jp_kan] /* jp_any */
+    }
+    
     static func voiceTypes() -> [MCPDictItemColumn] {
         return [.middleChinese,.mandrin,.cantonese,.wu,.min,.korean,.vietnamese,.jp_go,.jp_kan,.jp_tou,.jp_kwan,jp_other]
     }
+    
     func display(_ string:String) -> String {
         switch self {
         case .mandrin:
@@ -179,19 +202,41 @@ class MCPDictDB {
         self.db = try! Connection(path, readonly: true)
     }
     
-    func search(keyword:String, options:MCPSearchOptions) -> [MCPChar] {
-        let codepoints =
-            keyword
-                .unicodeScalars
-                .map { return String($0.value, radix:16).uppercased() }
+    func constructQuery(keyword:String, options:MCPSearchOptions) -> QueryType {
+        var query:QueryType
         
-        var query = mcpdict.filter(codepoints.contains(MCPDictItemColumn.unicode.expression))
+        switch options.queryMode {
+        case .unicode:
+            var codepoints = keyword //string
+                .unicodeScalars      //[UnicodeScalar]
+                .map { return $0.value } //[UInt32]
+                .filter { return Orthography.Unicode.isHanzi(codepoint: $0) }
+            if (options.allowVariants) {
+                codepoints = codepoints.flatMap { return Orthography.Unicode.getVariants(codepoint: $0)}
+            }
+            query = mcpdict.filter(
+                codepoints
+                    //.unique()
+                .map { return String($0, radix:16).uppercased() } // [String]
+                .contains(MCPDictItemColumn.unicode.expression))
+        default:
+            fatalError("not implemented!")
+        }
+    
         if options.searchInKuangxYonhOnly {
             let mc = MCPDictItemColumn.middleChinese.expression
             //if write as `mc != nil`, the swift compiler will complain that mc can never be nil
             //reverse the operands to cheat
             query = query.filter( nil != mc)
         }
+        
+        return query
+    }
+    
+    func search(keyword:String, options:MCPSearchOptions) -> [MCPChar] {
+        
+        let query = constructQuery(keyword: keyword, options: options)
+        
         do {
             return try self.db.prepare(query).flatMap(MCPChar.init)
         }

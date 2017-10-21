@@ -9,6 +9,7 @@
 import UIKit
 
 struct MCPSearchOptions {
+    var queryMode: MCPDictItemColumn = .unicode
     var searchInKuangxYonhOnly: Bool = false
     var allowVariants: Bool = false
     var toneInsensitive: Bool = false

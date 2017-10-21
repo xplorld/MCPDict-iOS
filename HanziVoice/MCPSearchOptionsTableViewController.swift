@@ -13,9 +13,9 @@ protocol MCPSearchOptionsTableViewControllerDelegate : class {
 }
 
 class MCPSearchOptionsTableViewController: UITableViewController {
-
+    
     // MARK: - Table view data source
-
+    
     @IBOutlet weak var searchBar: UISearchBar!
     
     @IBOutlet weak var queryModeButton: UIButton!
@@ -32,32 +32,51 @@ class MCPSearchOptionsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.allowsSelection = false
+        
         searchBar.delegate = self
         syncDataToView()
         
-        searchInKuangxYonhOnly.addTarget(self, action: #selector(SetSwitchValue), for: .valueChanged)
-        allowVariants.addTarget(self, action: #selector(SetSwitchValue), for: .valueChanged)
-        toneInsensitive.addTarget(self, action: #selector(SetSwitchValue), for: .valueChanged)
+        queryModeButton.addTarget(self, action: #selector(selectQueryMode), for: .touchUpInside)
+        searchInKuangxYonhOnly.addTarget(self, action: #selector(syncSwitchDataToView), for: .valueChanged)
+        allowVariants.addTarget(self, action: #selector(syncSwitchDataToView), for: .valueChanged)
+        toneInsensitive.addTarget(self, action: #selector(syncSwitchDataToView), for: .valueChanged)
     }
     
     
-    @IBAction func SetSwitchValue(_ sender: UISwitch) {
-//        switch sender {
-//        case searchInKuangxYonhOnly:
-            data.searchInKuangxYonhOnly = sender.isOn
-//        case allowVariants:
-            data.allowVariants = sender.isOn
-//        case toneInsensitive:
-            data.toneInsensitive = sender.isOn
-//        default:
-//            break
-//        }
+    func syncSwitchDataToView(_ sender: UISwitch) {
+        switch sender {
+        case searchInKuangxYonhOnly:
+            data.searchInKuangxYonhOnly = searchInKuangxYonhOnly.isOn
+        case allowVariants:
+            data.allowVariants = allowVariants.isOn
+        case toneInsensitive:
+            data.toneInsensitive = toneInsensitive.isOn
+        default:
+            break
+        }
     }
     
     func syncDataToView() {
+        queryModeButton.setTitle(data.queryMode.displayName, for: .normal)
         searchInKuangxYonhOnly.isOn = data.searchInKuangxYonhOnly
         allowVariants.isOn = data.allowVariants
         toneInsensitive.isOn = data.toneInsensitive
+    }
+    
+    func selectQueryMode() {
+        let alert = UIAlertController(title: "查询模式", message: "请选择查询模式。", preferredStyle: .actionSheet)
+        for type in MCPDictItemColumn.queryTypes() {
+            alert.addAction(
+                UIAlertAction(title: type.displayName,
+                              style: .default) {
+                                [weak self] _ in
+                                self?.data.queryMode = type
+                                self?.syncDataToView()
+            })
+        }
+        alert.addAction(UIAlertAction(title: "取消", style: .cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
     
     override func becomeFirstResponder() -> Bool {
