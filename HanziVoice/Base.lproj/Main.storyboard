@@ -172,8 +172,12 @@
                                 </prototypes>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ghy-QR-ctK">
-                                <rect key="frame" x="0.0" y="64" width="375" height="220"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
+                                    <view userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wD6-lb-jXL">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8mk-mC-PAH">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="220"/>
                                         <constraints>
@@ -184,17 +188,20 @@
                                         </connections>
                                     </containerView>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="8mk-mC-PAH" secondAttribute="bottom" id="Oxd-1m-MZp"/>
+                                    <constraint firstAttribute="bottom" secondItem="wD6-lb-jXL" secondAttribute="bottom" id="QLw-cu-Geb"/>
+                                    <constraint firstItem="wD6-lb-jXL" firstAttribute="leading" secondItem="Ghy-QR-ctK" secondAttribute="leading" id="bm5-py-L0U"/>
                                     <constraint firstItem="8mk-mC-PAH" firstAttribute="top" secondItem="Ghy-QR-ctK" secondAttribute="top" id="l3p-Rh-1mj"/>
                                     <constraint firstItem="8mk-mC-PAH" firstAttribute="leading" secondItem="Ghy-QR-ctK" secondAttribute="leading" id="rDn-DR-NcX"/>
+                                    <constraint firstAttribute="trailing" secondItem="wD6-lb-jXL" secondAttribute="trailing" id="uR0-IU-ZaK"/>
                                     <constraint firstAttribute="trailing" secondItem="8mk-mC-PAH" secondAttribute="trailing" id="wGc-uI-Tek"/>
+                                    <constraint firstItem="wD6-lb-jXL" firstAttribute="top" secondItem="Ghy-QR-ctK" secondAttribute="top" id="xCc-SJ-fzG"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ghy-QR-ctK" secondAttribute="bottom" id="8s1-6A-RbZ"/>
                             <constraint firstItem="xNP-i4-HMf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Oq4-wg-jSB"/>
                             <constraint firstItem="xNP-i4-HMf" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="UiL-K3-e1H"/>
                             <constraint firstAttribute="trailing" secondItem="xNP-i4-HMf" secondAttribute="trailing" id="YLE-cF-0tK"/>
@@ -243,7 +250,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="输入待检索汉字" translatesAutoresizingMaskIntoConstraints="NO" id="7kg-vT-xB9">
+                                                <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="输入待检索汉字" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7kg-vT-xB9">
                                                     <rect key="frame" x="0.0" y="-1" width="375" height="44"/>
                                                     <textInputTraits key="textInputTraits" returnKeyType="search" enablesReturnKeyAutomatically="YES"/>
                                                 </searchBar>

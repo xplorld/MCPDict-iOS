@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     let SEARCH_DETAIL_VIEW_ANIMATION_DURATION:TimeInterval = 0.5
     
     @IBAction func searchButtonTapped(_ sender: Any) {
-        SetSearchDetailView(active: true)
+        setSearchDetailView(active: true)
     }
     @IBOutlet weak var searchDetailView: UIView!
     weak var searchOptionsViewController : MCPSearchOptionsTableViewController! {
@@ -21,40 +21,6 @@ class ViewController: UIViewController {
         }
     }
     
-    func SetSearchDetailView(active:Bool)
-    {
-        if (active == !searchDetailView.isHidden) {
-            return
-        }
-        //if `active` mismatches hidden status, 
-        //perform action and set first responder to search view 
-        //(who sets first responder to search bar)
-        if active == false {
-            
-            UIView.transition(with: searchDetailView,
-                              duration: SEARCH_DETAIL_VIEW_ANIMATION_DURATION,
-                              options: .transitionCrossDissolve ,
-                              animations: {
-                                [weak self] in
-                                let _ = self?.searchOptionsViewController.resignFirstResponder()
-                                self?.searchDetailView.isHidden = true
-                                },
-                              completion: nil)
-        } else {
-            UIView.transition(with: searchDetailView,
-                              duration: SEARCH_DETAIL_VIEW_ANIMATION_DURATION,
-                              options: .transitionCrossDissolve,
-                              animations: {
-                                [weak self] in
-                                self?.searchDetailView.isHidden = false
-                                let _ = self?.searchOptionsViewController.becomeFirstResponder()
-                                },
-                              completion: nil)
-
-        }
-        
-    }
-
     @IBOutlet weak var tableView: UITableView!
     
     
@@ -77,7 +43,7 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if chars.isEmpty {
-            SetSearchDetailView(active: true)
+            setSearchDetailView(active: true)
         }
     }
 
@@ -97,9 +63,43 @@ class ViewController: UIViewController {
 
 extension ViewController : MCPSearchOptionsTableViewControllerDelegate {
     
+    func setSearchDetailView(active:Bool)
+    {
+        if (active == !searchDetailView.isHidden) {
+            return
+        }
+        //if `active` mismatches hidden status,
+        //perform action and set first responder to search view
+        //(who sets first responder to search bar)
+        if active == false {
+            
+            UIView.transition(with: searchDetailView,
+                              duration: SEARCH_DETAIL_VIEW_ANIMATION_DURATION,
+                              options: .transitionCrossDissolve ,
+                              animations: {
+                                [weak self] in
+                                let _ = self?.searchOptionsViewController.resignFirstResponder()
+                                self?.searchDetailView.isHidden = true
+                },
+                              completion: nil)
+        } else {
+            UIView.transition(with: searchDetailView,
+                              duration: SEARCH_DETAIL_VIEW_ANIMATION_DURATION,
+                              options: .transitionCrossDissolve,
+                              animations: {
+                                [weak self] in
+                                self?.searchDetailView.isHidden = false
+                                let _ = self?.searchOptionsViewController.becomeFirstResponder()
+                },
+                              completion: nil)
+            
+        }
+        
+    }
+
     func beginSearch(text: String, options: MCPSearchOptions) {
         self.chars = db.search(keyword: text, options: options)
-        SetSearchDetailView(active: false)
+        setSearchDetailView(active: false)
     }
 }
 
@@ -119,6 +119,6 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        SetSearchDetailView(active: false)
+        setSearchDetailView(active: false)
     }
 }

@@ -219,6 +219,9 @@ class MCPDictDB {
                     //.unique()
                 .map { return String($0, radix:16).uppercased() } // [String]
                 .contains(MCPDictItemColumn.unicode.expression))
+        case .mandrin:
+            let canonicalized = Orthography.Mandarin.canonicalize(keyword)
+            query = mcpdict.filter(MCPDictItemColumn.mandrin.expression == canonicalized)
         default:
             fatalError("not implemented!")
         }

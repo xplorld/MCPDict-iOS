@@ -10,6 +10,7 @@ import UIKit
 
 protocol MCPSearchOptionsTableViewControllerDelegate : class {
     func beginSearch(text: String, options: MCPSearchOptions)
+    func setSearchDetailView(active:Bool)
 }
 
 class MCPSearchOptionsTableViewController: UITableViewController {
@@ -89,6 +90,11 @@ class MCPSearchOptionsTableViewController: UITableViewController {
 
 extension MCPSearchOptionsTableViewController : UISearchBarDelegate
 {
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        delegate?.setSearchDetailView(active: false)
+    }
+    
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         let text = searchBar.text ?? ""
         delegate?.beginSearch(text: text, options: data)
