@@ -9,10 +9,9 @@
 import UIKit
 
 enum todo {
-    case backToTopAtSearch
+    case spaceSeperatedQueryKeywords
     case queryByAllTypes
     case toneInsensitive
-    case UIDimBackgroundOnQueryView
     case saveSearchOptionsToDefault
     case learningDict
     case aboutMe

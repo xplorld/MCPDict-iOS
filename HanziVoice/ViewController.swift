@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBAction func searchButtonTapped(_ sender: Any) {
         setSearchDetailView(active: true)
     }
+    @IBOutlet weak var searchDetailViewBackgroundView: UIControl!
     @IBOutlet weak var searchDetailView: UIView!
     weak var searchOptionsViewController : MCPSearchOptionsTableViewController! {
         didSet {
@@ -32,12 +33,19 @@ class ViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        searchDetailViewBackgroundView.addTarget(self, action: #selector(didTapSearchDetailViewBackground), for: .touchUpInside)
+        
         self.automaticallyAdjustsScrollViewInsets = false
         tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 135
     
+    }
+    
+    func didTapSearchDetailViewBackground() {
+        setSearchDetailView(active: false)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -98,6 +106,7 @@ extension ViewController : MCPSearchOptionsTableViewControllerDelegate {
     }
 
     func beginSearch(text: String, options: MCPSearchOptions) {
+        tableView.scrollToTop()
         self.chars = db.search(keyword: text, options: options)
         setSearchDetailView(active: false)
     }
