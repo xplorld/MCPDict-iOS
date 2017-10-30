@@ -10,6 +10,7 @@ import UIKit
 
 enum todo {
     case spaceSeperatedQueryKeywords
+    case selectableLabel
     case queryByAllTypes
     case toneInsensitive
     case saveSearchOptionsToDefault

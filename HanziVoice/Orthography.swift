@@ -17,6 +17,14 @@ extension OrthographyImpl {
     func canonicalize(_ string:String) -> String {
         return string
     }
+    
+    //by default, split by space and comma
+    func splitForSearch(_ string:String, options: MCPSearchOptions) -> [String] {
+        return string
+            .components(separatedBy: CharacterSet.whitespacesAndNewlines)
+            .flatMap { return $0.components(separatedBy: ",") }
+    }
+    
 }
 
 class Orthography {

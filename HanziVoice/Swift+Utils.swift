@@ -38,3 +38,16 @@ extension UIScrollView {
         setContentOffset(desiredOffset, animated: true)
     }
 }
+
+extension Collection {
+    func endoFlatMap_if(
+        _ condition: Bool,
+        _ transform: ((Self.Iterator.Element) -> [Self.Iterator.Element]))
+        -> [Self.Iterator.Element] {
+            if (condition) {
+                return self.flatMap(transform)
+            } else {
+                return Array(self)
+            }
+    }
+}

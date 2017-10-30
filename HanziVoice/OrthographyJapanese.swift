@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct OrthographyJapanese {
+struct OrthographyJapanese : OrthographyImpl {
     enum DisplayType {
         case hiragana
         case katakana
@@ -58,6 +58,10 @@ struct OrthographyJapanese {
     
     func display(_ s:String, as type: DisplayType = .hiragana) -> String {
         return convert(s, to: type)
+    }
+    
+    func canonicalize(_ string: String) -> String {
+        return convert(string, to: .nippon)
     }
 }
     

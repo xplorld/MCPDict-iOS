@@ -54,6 +54,35 @@ enum MCPDictItemColumn : String {
         return [.middleChinese,.mandrin,.cantonese,.wu,.min,.korean,.vietnamese,.jp_go,.jp_kan,.jp_tou,.jp_kwan,jp_other]
     }
     
+    func splitForSearch(_ string: String, options: MCPSearchOptions) -> [String]
+    {
+        switch self {
+        case .unicode:
+            return Orthography.Unicode.splitForSearch(string, options: options)
+        case .korean:
+            return Orthography.Korean.splitForSearch(string, options: options)
+        case .jp_go, .jp_kan, .jp_tou, .jp_kwan, .jp_other:
+            return Orthography.Japanese.splitForSearch(string, options: options)
+        //todo: more dispatches
+        default:
+            return string.components(separatedBy: .whitespacesAndNewlines)
+        }
+    }
+    
+    func canonicalize(_ string: String) -> String {
+        switch self {
+        case .mandrin:
+            return Orthography.Mandarin.canonicalize(string)
+        case .korean:
+            return Orthography.Korean.canonicalize(string)
+        case .jp_go, .jp_kan, .jp_tou, .jp_kwan, .jp_other:
+            return Orthography.Japanese.canonicalize(string)
+        //todo: more dispatches
+        default:
+            return string
+        }
+    }
+    
     func display(_ string:String) -> String {
         switch self {
         case .mandrin:
@@ -205,26 +234,18 @@ class MCPDictDB {
     func constructQuery(keyword:String, options:MCPSearchOptions) -> QueryType {
         var query:QueryType
         
-        switch options.queryMode {
-        case .unicode:
-            var codepoints = keyword //string
-                .unicodeScalars      //[UnicodeScalar]
-                .map { return $0.value } //[UInt32]
-                .filter { return Orthography.Unicode.isHanzi(codepoint: $0) }
-            if (options.allowVariants) {
-                codepoints = codepoints.flatMap { return Orthography.Unicode.getVariants(codepoint: $0)}
-            }
-            query = mcpdict.filter(
-                codepoints
-                    //.unique()
-                .map { return String($0, radix:16).uppercased() } // [String]
-                .contains(MCPDictItemColumn.unicode.expression))
-        case .mandrin:
-            let canonicalized = Orthography.Mandarin.canonicalize(keyword)
+        let queryMode = options.queryMode
+        
+        return mcpdict.filter(
+            queryMode
+                .splitForSearch(keyword, options: options)
+                .contains(queryMode.expression)
+        )
+        
+        //todo implement splitForSearch for mc
+            let canonicalized = queryMode.canonicalize(keyword)
             query = mcpdict.filter(MCPDictItemColumn.mandrin.expression == canonicalized)
-        default:
-            fatalError("not implemented!")
-        }
+        
     
         if options.searchInKuangxYonhOnly {
             let mc = MCPDictItemColumn.middleChinese.expression

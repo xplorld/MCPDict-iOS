@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Swift
 
 class OrthographyUnicode : OrthographyImpl {
     
@@ -34,4 +35,13 @@ class OrthographyUnicode : OrthographyImpl {
         variantsDict = Orthography.readVariants(filename: "orthography_hz_variants")
     }
     
+    func splitForSearch(_ string: String, options: MCPSearchOptions) -> [String] {
+        return string
+            .unicodeScalars      //[UnicodeScalar]
+            .map { return $0.value } //[UInt32]
+            .filter { return Orthography.Unicode.isHanzi(codepoint: $0) }
+            .endoFlatMap_if(options.allowVariants)
+                { return Orthography.Unicode.getVariants(codepoint: $0) }
+            .map { return String($0, radix:16).uppercased() }
+    }
 }

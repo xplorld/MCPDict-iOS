@@ -80,6 +80,7 @@ import UIKit
         
         textLabel.numberOfLines = 0
         textLabel.textAlignment = .natural
+        textLabel.isUserInteractionEnabled = true
     }
     
     /*
