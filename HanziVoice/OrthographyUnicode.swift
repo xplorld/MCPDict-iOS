@@ -19,7 +19,11 @@ class OrthographyUnicode : OrthographyImpl {
         case unicode
     }
     
-    func display(_ rawString: String, as type: DisplayType) -> String {
+    func display(_ rawString: String) -> String {
+        return display(rawString, as: .unicode)
+    }
+    
+    func display(_ rawString: String, as type: DisplayType = .unicode) -> String {
         return rawString
     }
     

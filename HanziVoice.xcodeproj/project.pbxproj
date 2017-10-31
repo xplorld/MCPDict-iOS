@@ -22,6 +22,8 @@
 		1A4F2ABE1F9C5D0800697B97 /* OrthographyMandrin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4F2ABD1F9C5D0800697B97 /* OrthographyMandrin.swift */; };
 		1A4F2AC01F9C5D4200697B97 /* OrthographyJapanese.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4F2ABF1F9C5D4200697B97 /* OrthographyJapanese.swift */; };
 		1A4F2AC21F9C5D8700697B97 /* OrthographyKorean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4F2AC11F9C5D8700697B97 /* OrthographyKorean.swift */; };
+		1A5425071FA84B8E0013C0D5 /* MCPDictItemColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5425061FA84B8E0013C0D5 /* MCPDictItemColumn.swift */; };
+		1A5425091FA8D30C0013C0D5 /* OrthographyCantonese.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5425081FA8D30C0013C0D5 /* OrthographyCantonese.swift */; };
 		1A7B5BA71F2C815600E5098E /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A7B5BA61F2C815600E5098E /* libsqlite3.0.tbd */; };
 		1A7B5BA91F2C816B00E5098E /* mcpdict.db in Resources */ = {isa = PBXBuildFile; fileRef = 1A7B5BA81F2C816B00E5098E /* mcpdict.db */; };
 		1A7B5BAB1F2C817C00E5098E /* DBReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7B5BAA1F2C817C00E5098E /* DBReader.swift */; };
@@ -84,6 +86,8 @@
 		1A4F2ABD1F9C5D0800697B97 /* OrthographyMandrin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = OrthographyMandrin.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		1A4F2ABF1F9C5D4200697B97 /* OrthographyJapanese.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = OrthographyJapanese.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		1A4F2AC11F9C5D8700697B97 /* OrthographyKorean.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = OrthographyKorean.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		1A5425061FA84B8E0013C0D5 /* MCPDictItemColumn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCPDictItemColumn.swift; sourceTree = "<group>"; };
+		1A5425081FA8D30C0013C0D5 /* OrthographyCantonese.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrthographyCantonese.swift; sourceTree = "<group>"; };
 		1A7B5BA61F2C815600E5098E /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		1A7B5BA81F2C816B00E5098E /* mcpdict.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = mcpdict.db; path = HanziVoice/mcpdict.db; sourceTree = SOURCE_ROOT; };
 		1A7B5BAA1F2C817C00E5098E /* DBReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBReader.swift; sourceTree = "<group>"; };
@@ -169,6 +173,7 @@
 				1A4F2AB81F9C5C5B00697B97 /* Orthography */,
 				1A4F2AB61F9C582A00697B97 /* todo.swift */,
 				1A4F2AB21F9B9DAA00697B97 /* MCPSearchOptions.swift */,
+				1A5425061FA84B8E0013C0D5 /* MCPDictItemColumn.swift */,
 				1A9060B21F2DC8130056A825 /* MCPVoiceView.swift */,
 				1A9060CA1F2DEAE10056A825 /* resources */,
 				1A389C261F283D1500875A80 /* AppDelegate.swift */,
@@ -213,6 +218,7 @@
 				1A4F2ABD1F9C5D0800697B97 /* OrthographyMandrin.swift */,
 				1A4F2ABF1F9C5D4200697B97 /* OrthographyJapanese.swift */,
 				1A4F2AC11F9C5D8700697B97 /* OrthographyKorean.swift */,
+				1A5425081FA8D30C0013C0D5 /* OrthographyCantonese.swift */,
 			);
 			name = Orthography;
 			sourceTree = "<group>";
@@ -554,9 +560,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A5425091FA8D30C0013C0D5 /* OrthographyCantonese.swift in Sources */,
 				1A389C291F283D1500875A80 /* ViewController.swift in Sources */,
 				1A4F2ABE1F9C5D0800697B97 /* OrthographyMandrin.swift in Sources */,
 				1A4F2AB31F9B9DAA00697B97 /* MCPSearchOptions.swift in Sources */,
+				1A5425071FA84B8E0013C0D5 /* MCPDictItemColumn.swift in Sources */,
 				1A4F2ABA1F9C5C8500697B97 /* OrthographyUnicode.swift in Sources */,
 				1A389C271F283D1500875A80 /* AppDelegate.swift in Sources */,
 				1A9060B31F2DC8130056A825 /* MCPVoiceView.swift in Sources */,

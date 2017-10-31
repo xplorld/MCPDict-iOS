@@ -39,6 +39,10 @@ struct OrthographyKorean : OrthographyImpl {
         return codepoint >= OrthographyKorean.firstHangul && codepoint <= OrthographyKorean.lastHangul
     }
     
+    func display(_ s:String) -> String {
+        return self.display(s, as: .hangul)
+    }
+    
     func display(_ s:String, as type: DisplayType = .hangul) -> String {
         //only support from romanization to hangul
         if type == .romanization {

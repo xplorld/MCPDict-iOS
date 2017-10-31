@@ -105,4 +105,8 @@ struct OrthographyMandarin : OrthographyImpl {
         }
         return displayString
     }
+    
+    func display(_ rawString: String) -> String {
+        return self.display(rawString, as: .pinyin)
+    }
 }

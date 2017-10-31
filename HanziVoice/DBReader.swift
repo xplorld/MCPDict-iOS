@@ -9,133 +9,6 @@
 import Foundation
 import SQLite
 
-enum MCPDictItemColumn : String {
-    case unicode = "unicode"
-    case middleChinese = "mc"
-    case mandrin = "pu"
-    case cantonese = "ct"
-    case wu = "sh"
-    case min = "mn"
-    case korean = "kr"
-    case vietnamese = "vn"
-    case jp_go = "jp_go"
-    case jp_kan = "jp_kan"
-    case jp_tou = "jp_tou"
-    case jp_kwan = "jp_kwan"
-    case jp_other = "jp_other"
-    
-    var expression : Expression<String?> {
-        return Expression<String?>(self.rawValue)
-    }
-    
-    var displayName : String {
-        return [
-            .unicode: "汉字",
-            .middleChinese: "广韵中古音",
-            .mandrin: "普通话拼音",
-            .cantonese: "广东话拼音",
-            .wu: "吴语音",
-            .min: "闽语音",
-            .korean: "韩文",
-            .vietnamese: "越南文",
-            .jp_go: "日语吴音",
-            .jp_kan: "日语汉音",
-            .jp_tou: "日语唐音",
-            .jp_kwan: "日语惯用音",
-            .jp_other: "日语其他音",
-        ][self]!
-    }
-    
-    static func queryTypes() -> [MCPDictItemColumn] {
-        return [.unicode, .middleChinese,.mandrin,.cantonese,.wu,.min,.korean,.vietnamese,.jp_go,.jp_kan] /* jp_any */
-    }
-    
-    static func voiceTypes() -> [MCPDictItemColumn] {
-        return [.middleChinese,.mandrin,.cantonese,.wu,.min,.korean,.vietnamese,.jp_go,.jp_kan,.jp_tou,.jp_kwan,jp_other]
-    }
-    
-    func splitForSearch(_ string: String, options: MCPSearchOptions) -> [String]
-    {
-        switch self {
-        case .unicode:
-            return Orthography.Unicode.splitForSearch(string, options: options)
-        case .korean:
-            return Orthography.Korean.splitForSearch(string, options: options)
-        case .jp_go, .jp_kan, .jp_tou, .jp_kwan, .jp_other:
-            return Orthography.Japanese.splitForSearch(string, options: options)
-        //todo: more dispatches
-        default:
-            return string.components(separatedBy: .whitespacesAndNewlines)
-        }
-    }
-    
-    func canonicalize(_ string: String) -> String {
-        switch self {
-        case .mandrin:
-            return Orthography.Mandarin.canonicalize(string)
-        case .korean:
-            return Orthography.Korean.canonicalize(string)
-        case .jp_go, .jp_kan, .jp_tou, .jp_kwan, .jp_other:
-            return Orthography.Japanese.canonicalize(string)
-        //todo: more dispatches
-        default:
-            return string
-        }
-    }
-    
-    func display(_ string:String) -> String {
-        switch self {
-        case .mandrin:
-            return Orthography.Mandarin.display(string)
-        case .korean:
-            return Orthography.Korean.display(string)
-        case .jp_go, .jp_kan, .jp_tou, .jp_kwan, .jp_other:
-            return Orthography.Japanese.display(string)
-        //todo: more dispatches
-        default:
-            return string
-        }
-    }
-    
-    func displayAll(_ string:String) -> String {
-        var newString = ""
-        let alphanumerics = CharacterSet.alphanumerics
-        let scalars = string.unicodeScalars
-        
-        let index = scalars.startIndex
-        var beginIndex = index
-        var endIndex = index
-        while (beginIndex < scalars.endIndex) {
-            endIndex = beginIndex
-            while endIndex < scalars.endIndex && alphanumerics.contains(scalars[endIndex]) {
-                endIndex = scalars.index(after: endIndex) //increment if ok
-            }
-            //here: scalars[endIndex] is not an alphanumerics
-            //if end>begin: a good range
-            if endIndex > beginIndex {
-                let substring = String(scalars[beginIndex ..< endIndex])
-                let displayed = self.display(substring)
-                newString.append(displayed)
-                beginIndex = endIndex
-            }
-            while beginIndex < scalars.endIndex && !alphanumerics.contains(scalars[beginIndex]) {
-                beginIndex = scalars.index(after: beginIndex) //increment if ok
-            }
-            let substring = String(scalars[endIndex ..< beginIndex])
-            newString.append(substring)
-        }
-        newString = newString
-            .replacingOccurrences(of: ",", with: ", ")
-            .replacingOccurrences(of: "(", with: " (")
-            .replacingOccurrences(of: "]", with: "] ")
-            .replacingOccurrences(of: " +", with: " ")
-            .replacingOccurrences(of: " ,", with: ",")
-        return newString
-        
-    }
-    
-}
-
 struct MCPVoice {
     let raw:String
     let display:String
@@ -232,29 +105,21 @@ class MCPDictDB {
     }
     
     func constructQuery(keyword:String, options:MCPSearchOptions) -> QueryType {
-        var query:QueryType
         
         let queryMode = options.queryMode
         
-        return mcpdict.filter(
-            queryMode
-                .splitForSearch(keyword, options: options)
-                .contains(queryMode.expression)
-        )
-        
-        //todo implement splitForSearch for mc
-            let canonicalized = queryMode.canonicalize(keyword)
-            query = mcpdict.filter(MCPDictItemColumn.mandrin.expression == canonicalized)
-        
-    
-        if options.searchInKuangxYonhOnly {
-            let mc = MCPDictItemColumn.middleChinese.expression
-            //if write as `mc != nil`, the swift compiler will complain that mc can never be nil
-            //reverse the operands to cheat
-            query = query.filter( nil != mc)
-        }
-        
-        return query
+        return mcpdict
+            .filter(
+                queryMode
+                    .splitForSearch(queryMode.canonicalize(keyword),
+                                    options: options)
+                    .contains(queryMode.expression))
+            .endoTransform_if(options.searchInKuangxYonhOnly) {
+                let mc = MCPDictItemColumn.middleChinese.expression
+                //if write as `mc != nil`, the swift compiler will complain that mc can never be nil
+                //reverse the operands to cheat
+                return $0.filter( nil != mc)
+            }
     }
     
     func search(keyword:String, options:MCPSearchOptions) -> [MCPChar] {

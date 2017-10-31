@@ -8,12 +8,13 @@
 
 import UIKit
 
-protocol OrthographyImpl {
-    associatedtype DisplayType
-    func display(_ rawString:String, as type: DisplayType) -> String
-}
+protocol OrthographyInstnace { }
 
-extension OrthographyImpl {
+extension OrthographyInstnace {
+    func display(_ rawString:String) -> String {
+        return rawString
+    }
+    
     func canonicalize(_ string:String) -> String {
         return string
     }
@@ -25,6 +26,15 @@ extension OrthographyImpl {
             .flatMap { return $0.components(separatedBy: ",") }
     }
     
+    //by default, only has original tone
+    func getAllTones(_ string:String) -> [String] {
+        return [string]
+    }
+}
+
+protocol OrthographyImpl : OrthographyInstnace {
+    associatedtype DisplayType
+    func display(_ rawString:String, as type: DisplayType) -> String
 }
 
 class Orthography {
@@ -36,10 +46,19 @@ class Orthography {
     
     //todo: no bopomofo yet
     static let Mandarin = OrthographyMandarin()
-
-    static let Japanese = OrthographyJapanese()
+    
+    static let Cantonese = OrthographyCantonese()
+    
+    static let Wu:OrthographyInstnace
+    
+    static let Min:OrthographyInstnace
     
     static let Korean = OrthographyKorean()
+    
+    static let Vietnamese:OrthographyInstnace
+    
+    static let Japanese = OrthographyJapanese()
+    
 }
 
 extension Orthography {

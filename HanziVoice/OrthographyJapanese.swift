@@ -32,8 +32,8 @@ struct OrthographyJapanese : OrthographyImpl {
             }
         }
     }
-    func convert(_ string:String, to: DisplayType) -> String {
-        let map = self.maps[to]!
+    func display(_ string:String, as type: DisplayType) -> String {
+        let map = self.maps[type]!
         var newString = ""
         var index = string.startIndex
         while index < string.endIndex {
@@ -56,12 +56,12 @@ struct OrthographyJapanese : OrthographyImpl {
         return newString
     }
     
-    func display(_ s:String, as type: DisplayType = .hiragana) -> String {
-        return convert(s, to: type)
+    func display(_ rawString: String) -> String {
+        return display(rawString, as: .hiragana)
     }
     
     func canonicalize(_ string: String) -> String {
-        return convert(string, to: .nippon)
+        return display(string, as: .nippon)
     }
 }
     

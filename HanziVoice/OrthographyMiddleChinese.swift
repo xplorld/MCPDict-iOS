@@ -10,7 +10,7 @@ import UIKit
 
 // : OrthographyImpl
 //todo: 比较难，等会再说
-class OrthographyMiddleChinese {
+class OrthographyMiddleChinese : OrthographyImpl {
     var mapInitials:[String:String] = [:] //声母
     var mapFinals:[String:String] = [:]   //韵母
     var mapTongx:[String:String] = [:]

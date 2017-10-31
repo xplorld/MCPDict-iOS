@@ -22,6 +22,13 @@ extension String {
         let index = self.index(before: self.endIndex)
         return self[index]
     }
+    var dropLast:String {
+        if self.isEmpty {
+            return self
+        }
+        //opened range
+        return self.substring(to: self.index(before: self.endIndex))
+    }
 }
 
 extension Array {
@@ -49,5 +56,20 @@ extension Collection {
             } else {
                 return Array(self)
             }
+    }
+}
+
+//extension AnyObject {
+import SQLite
+extension QueryType {
+    func endoTransform_if(
+        _ condition: Bool,
+        _ transform:((Self) -> Self))
+    -> Self {
+        if (condition) {
+            return transform(self)
+        } else {
+            return self
+        }
     }
 }
