@@ -8,9 +8,9 @@
 
 import UIKit
 
-protocol OrthographyInstnace { }
+protocol OrthographyInstance { }
 
-extension OrthographyInstnace {
+extension OrthographyInstance {
     func display(_ rawString:String) -> String {
         return rawString
     }
@@ -32,7 +32,7 @@ extension OrthographyInstnace {
     }
 }
 
-protocol OrthographyImpl : OrthographyInstnace {
+protocol OrthographyImpl : OrthographyInstance {
     associatedtype DisplayType
     func display(_ rawString:String, as type: DisplayType) -> String
 }
@@ -49,13 +49,13 @@ class Orthography {
     
     static let Cantonese = OrthographyCantonese()
     
-    static let Wu:OrthographyInstnace
+    static let Wu = OrthographyWu()
     
-    static let Min:OrthographyInstnace
+    static let Min = OrthographyMin()
     
     static let Korean = OrthographyKorean()
     
-    static let Vietnamese:OrthographyInstnace
+    static let Vietnamese:OrthographyInstance
     
     static let Japanese = OrthographyJapanese()
     

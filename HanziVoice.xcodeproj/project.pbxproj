@@ -41,6 +41,8 @@
 		1A9060C81F2DEADB0056A825 /* orthography_pu_pinyin.tsv in Resources */ = {isa = PBXBuildFile; fileRef = 1A9060BE1F2DEADB0056A825 /* orthography_pu_pinyin.tsv */; };
 		1A9060C91F2DEADB0056A825 /* orthography_vn.tsv in Resources */ = {isa = PBXBuildFile; fileRef = 1A9060BF1F2DEADB0056A825 /* orthography_vn.tsv */; };
 		1A9060CC1F2DFA140056A825 /* Swift+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9060CB1F2DFA140056A825 /* Swift+Utils.swift */; };
+		1AAAD9AA1FA8E9A200670B2E /* OrthographyWu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAAD9A91FA8E9A200670B2E /* OrthographyWu.swift */; };
+		1AAAD9AC1FA8EBF300670B2E /* OrthographyMin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAAD9AB1FA8EBF300670B2E /* OrthographyMin.swift */; };
 		3A875BB19C4F7C1A82F74DB1 /* Pods_HanziVoiceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2284B0C92198D4C0F6CC96C0 /* Pods_HanziVoiceTests.framework */; };
 		ADAA7AA17F17B81DC1D80F8C /* Pods_HanziVoiceUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2090F349FBAE346DAAF32277 /* Pods_HanziVoiceUITests.framework */; };
 		F9E2E0AF7D5CC0F14E6AB991 /* Pods_HanziVoice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ECE1CBF688772E909FC63E9 /* Pods_HanziVoice.framework */; };
@@ -106,6 +108,8 @@
 		1A9060BE1F2DEADB0056A825 /* orthography_pu_pinyin.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = orthography_pu_pinyin.tsv; sourceTree = "<group>"; };
 		1A9060BF1F2DEADB0056A825 /* orthography_vn.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = orthography_vn.tsv; sourceTree = "<group>"; };
 		1A9060CB1F2DFA140056A825 /* Swift+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Swift+Utils.swift"; sourceTree = "<group>"; };
+		1AAAD9A91FA8E9A200670B2E /* OrthographyWu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrthographyWu.swift; sourceTree = "<group>"; };
+		1AAAD9AB1FA8EBF300670B2E /* OrthographyMin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrthographyMin.swift; sourceTree = "<group>"; };
 		2090F349FBAE346DAAF32277 /* Pods_HanziVoiceUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HanziVoiceUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2284B0C92198D4C0F6CC96C0 /* Pods_HanziVoiceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HanziVoiceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8014460AAD415B3A60726D14 /* Pods-HanziVoiceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HanziVoiceTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HanziVoiceTests/Pods-HanziVoiceTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -215,6 +219,8 @@
 				1A9060B41F2DE7B30056A825 /* Orthography.swift */,
 				1A4F2AB91F9C5C8500697B97 /* OrthographyUnicode.swift */,
 				1A4F2ABB1F9C5CD700697B97 /* OrthographyMiddleChinese.swift */,
+				1AAAD9A91FA8E9A200670B2E /* OrthographyWu.swift */,
+				1AAAD9AB1FA8EBF300670B2E /* OrthographyMin.swift */,
 				1A4F2ABD1F9C5D0800697B97 /* OrthographyMandrin.swift */,
 				1A4F2ABF1F9C5D4200697B97 /* OrthographyJapanese.swift */,
 				1A4F2AC11F9C5D8700697B97 /* OrthographyKorean.swift */,
@@ -562,6 +568,7 @@
 			files = (
 				1A5425091FA8D30C0013C0D5 /* OrthographyCantonese.swift in Sources */,
 				1A389C291F283D1500875A80 /* ViewController.swift in Sources */,
+				1AAAD9AC1FA8EBF300670B2E /* OrthographyMin.swift in Sources */,
 				1A4F2ABE1F9C5D0800697B97 /* OrthographyMandrin.swift in Sources */,
 				1A4F2AB31F9B9DAA00697B97 /* MCPSearchOptions.swift in Sources */,
 				1A5425071FA84B8E0013C0D5 /* MCPDictItemColumn.swift in Sources */,
@@ -569,6 +576,7 @@
 				1A389C271F283D1500875A80 /* AppDelegate.swift in Sources */,
 				1A9060B31F2DC8130056A825 /* MCPVoiceView.swift in Sources */,
 				1A9060B51F2DE7B30056A825 /* Orthography.swift in Sources */,
+				1AAAD9AA1FA8E9A200670B2E /* OrthographyWu.swift in Sources */,
 				1A4F2ABC1F9C5CD700697B97 /* OrthographyMiddleChinese.swift in Sources */,
 				1A4F2AB71F9C582A00697B97 /* todo.swift in Sources */,
 				1A4F2AC21F9C5D8700697B97 /* OrthographyKorean.swift in Sources */,
