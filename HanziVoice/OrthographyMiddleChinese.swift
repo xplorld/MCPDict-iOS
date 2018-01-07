@@ -11,12 +11,23 @@ import UIKit
 // : OrthographyImpl
 //todo: 比较难，等会再说
 class OrthographyMiddleChinese : OrthographyImpl {
+
     var mapInitials:[String:String] = [:] //声母
     var mapFinals:[String:String] = [:]   //韵母
     var mapTongx:[String:String] = [:]
     var mapHo:[String:String] = [:]
     var mapSjep:[String:String] = [:]
     var mapBiengSjyix:[String:String] = [:] //平水
+    
+    enum DisplayType {
+        case normal
+    }
+    
+    //todo
+    func display(_ rawString: String, as type: DisplayType) -> String {
+        return rawString
+    }
+
     
     init() {
         //initials
@@ -42,4 +53,6 @@ class OrthographyMiddleChinese : OrthographyImpl {
             }
         }
     }
+    
+    
 }

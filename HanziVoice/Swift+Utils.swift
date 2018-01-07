@@ -29,6 +29,15 @@ extension String {
         //opened range
         return self.substring(to: self.index(before: self.endIndex))
     }
+    
+    func slowChar(at distance: Int) -> Character? {
+        if (distance > self.characters.count) {
+            return nil
+        }
+        let index = self.index(self.startIndex, offsetBy: distance)
+        return self.characters[index]
+    }
+    
 }
 
 extension Array {

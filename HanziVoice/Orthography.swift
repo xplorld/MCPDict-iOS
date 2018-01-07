@@ -8,7 +8,17 @@
 
 import UIKit
 
-protocol OrthographyInstance { }
+protocol OrthographyInstance {
+    func display(_ rawString:String) -> String
+    
+    func canonicalize(_ string:String) -> String
+    
+    //by default, split by space and comma
+    func splitForSearch(_ string:String, options: MCPSearchOptions) -> [String]
+    
+    //by default, only has original tone
+    func getAllTones(_ string:String) -> [String]
+}
 
 extension OrthographyInstance {
     func display(_ rawString:String) -> String {
@@ -55,7 +65,7 @@ class Orthography {
     
     static let Korean = OrthographyKorean()
     
-    static let Vietnamese:OrthographyInstance
+    static let Vietnamese = OrthographyVietnamese()
     
     static let Japanese = OrthographyJapanese()
     

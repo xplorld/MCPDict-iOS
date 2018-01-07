@@ -24,6 +24,7 @@
 		1A4F2AC21F9C5D8700697B97 /* OrthographyKorean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4F2AC11F9C5D8700697B97 /* OrthographyKorean.swift */; };
 		1A5425071FA84B8E0013C0D5 /* MCPDictItemColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5425061FA84B8E0013C0D5 /* MCPDictItemColumn.swift */; };
 		1A5425091FA8D30C0013C0D5 /* OrthographyCantonese.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5425081FA8D30C0013C0D5 /* OrthographyCantonese.swift */; };
+		1A777C691FAA1234000CBEDE /* OrthographyVietnamese.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A777C681FAA1234000CBEDE /* OrthographyVietnamese.swift */; };
 		1A7B5BA71F2C815600E5098E /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A7B5BA61F2C815600E5098E /* libsqlite3.0.tbd */; };
 		1A7B5BA91F2C816B00E5098E /* mcpdict.db in Resources */ = {isa = PBXBuildFile; fileRef = 1A7B5BA81F2C816B00E5098E /* mcpdict.db */; };
 		1A7B5BAB1F2C817C00E5098E /* DBReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7B5BAA1F2C817C00E5098E /* DBReader.swift */; };
@@ -90,6 +91,7 @@
 		1A4F2AC11F9C5D8700697B97 /* OrthographyKorean.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = OrthographyKorean.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		1A5425061FA84B8E0013C0D5 /* MCPDictItemColumn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MCPDictItemColumn.swift; sourceTree = "<group>"; };
 		1A5425081FA8D30C0013C0D5 /* OrthographyCantonese.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrthographyCantonese.swift; sourceTree = "<group>"; };
+		1A777C681FAA1234000CBEDE /* OrthographyVietnamese.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrthographyVietnamese.swift; sourceTree = "<group>"; };
 		1A7B5BA61F2C815600E5098E /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		1A7B5BA81F2C816B00E5098E /* mcpdict.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = mcpdict.db; path = HanziVoice/mcpdict.db; sourceTree = SOURCE_ROOT; };
 		1A7B5BAA1F2C817C00E5098E /* DBReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBReader.swift; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 				1A4F2ABF1F9C5D4200697B97 /* OrthographyJapanese.swift */,
 				1A4F2AC11F9C5D8700697B97 /* OrthographyKorean.swift */,
 				1A5425081FA8D30C0013C0D5 /* OrthographyCantonese.swift */,
+				1A777C681FAA1234000CBEDE /* OrthographyVietnamese.swift */,
 			);
 			name = Orthography;
 			sourceTree = "<group>";
@@ -568,6 +571,7 @@
 			files = (
 				1A5425091FA8D30C0013C0D5 /* OrthographyCantonese.swift in Sources */,
 				1A389C291F283D1500875A80 /* ViewController.swift in Sources */,
+				1A777C691FAA1234000CBEDE /* OrthographyVietnamese.swift in Sources */,
 				1AAAD9AC1FA8EBF300670B2E /* OrthographyMin.swift in Sources */,
 				1A4F2ABE1F9C5D0800697B97 /* OrthographyMandrin.swift in Sources */,
 				1A4F2AB31F9B9DAA00697B97 /* MCPSearchOptions.swift in Sources */,

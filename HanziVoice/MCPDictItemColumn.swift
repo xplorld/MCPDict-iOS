@@ -54,7 +54,7 @@ enum MCPDictItemColumn : String {
         return [.middleChinese,.mandrin,.cantonese,.wu,.min,.korean,.vietnamese,.jp_go,.jp_kan,.jp_tou,.jp_kwan,jp_other]
     }
     
-    func orthography() -> OrthographyInstnace {
+    func orthography() -> OrthographyInstance {
         switch self {
         case .unicode:
             return Orthography.Unicode
@@ -84,7 +84,7 @@ enum MCPDictItemColumn : String {
     }
     
     func canonicalize(_ string: String) -> String {
-        return self.canonicalize(string)
+        return self.orthography().canonicalize(string)
     }
     
     func display(_ string:String) -> String {
